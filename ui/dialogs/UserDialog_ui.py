@@ -23,7 +23,7 @@ class Ui_TestDialog(object):
     def setupUi(self, TestDialog):
         if not TestDialog.objectName():
             TestDialog.setObjectName(u"TestDialog")
-        TestDialog.resize(540, 580)
+        TestDialog.resize(542, 580)
         TestDialog.setStyleSheet(u"QDialog{\n"
 "	background-color: white;\n"
 "}\n"
@@ -36,14 +36,9 @@ class Ui_TestDialog(object):
 "}\n"
 "\n"
 "")
-        self.line = QFrame(TestDialog)
-        self.line.setObjectName(u"line")
-        self.line.setGeometry(QRect(0, 50, 541, 16))
-        self.line.setFrameShape(QFrame.Shape.HLine)
-        self.line.setFrameShadow(QFrame.Shadow.Sunken)
         self.label = QLabel(TestDialog)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(30, 10, 151, 31))
+        self.label.setGeometry(QRect(30, 20, 151, 31))
         font = QFont()
         font.setPointSize(22)
         font.setBold(True)
@@ -162,6 +157,11 @@ class Ui_TestDialog(object):
 
         self.horizontalLayout.addWidget(self.btn_cancel)
 
+        self.line = QFrame(TestDialog)
+        self.line.setObjectName(u"line")
+        self.line.setGeometry(QRect(0, 60, 541, 20))
+        self.line.setFrameShape(QFrame.Shape.HLine)
+        self.line.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.retranslateUi(TestDialog)
 

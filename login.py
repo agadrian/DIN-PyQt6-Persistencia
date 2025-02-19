@@ -1,49 +1,16 @@
 from PyQt6.QtWidgets import * 
-from PyQt6.QtCore import Qt, QPoint
 from PyQt6 import uic  
-import sys
 import os
-import pyrebase
 import json
-import sqlite3
-from dotenv import load_dotenv
 
-load_dotenv()
+from db_functions import *
+
+
 
 # TODO: Cuando se cree un usuario manualmente desde el panel, meterlo primero en firebase con las comprobaciones, y luego en la base de datos de sqlite con la id de firbase (como si fuera registro normal)
 # TODO: 
 # TODO: 
 # TODO: 
-
-
-# Configuración FireBase
-
-firebase_config = {
-    "apiKey": os.getenv("FIREBASE_API_KEY"),
-    "authDomain": os.getenv("FIREBASE_AUTH_DOMAIN"),
-    "databaseURL": os.getenv("FIREBASE_DATABASE_URL"),
-    "projectId": os.getenv("FIREBASE_PROJECT_ID"),
-    "storageBucket": os.getenv("FIREBASE_STORAGE_BUCKET"),
-    "messagingSenderId": os.getenv("FIREBASE_MESSAGING_SENDER_ID"),
-    "appId": os.getenv("FIREBASE_APP_ID"),
-    "measurementId": os.getenv("FIREBASE_MEASUREMENT_ID")
-}
-
-firebase = pyrebase.initialize_app(firebase_config)
-auth = firebase.auth()
-
-
-FIREBASE_ERRORS = {
-    "EMAIL_NOT_FOUND": "Este correo no está registrado.",
-    "INVALID_PASSWORD": "La contraseña ingresada es incorrecta.",
-    "MISSING_PASSWORD": "Contraseña requerida.",
-    "USER_DISABLED": "Esta cuenta ha sido deshabilitada.",
-    "INVALID_EMAIL": "El correo ingresado no es válido.",
-    "INVALID_LOGIN_CREDENTIALS": "Credenciales incorrectas.",
-    "TOO_MANY_ATTEMPTS_TRY_LATER": "Has intentado demasiadas veces. Intenta más tarde.",
-    "WEAK_PASSWORD": "Contraseña demasiado débil.",
-    "EMAIL_EXISTS": "El correo ingresado ya está registrado.",
-}
 
 
 class LoginWindow(QWidget):
@@ -74,11 +41,13 @@ class LoginWindow(QWidget):
             user_id = user["localId"]
 
             # Conexion con sqlite3
-            conn = sqlite3.connect("database.db")
-            cursor = conn.cursor()
+            conn, cursor = get_db_connection()
+            if conn is None or cursor is None:
+                raise Exception("No se pudo conectar a la base de datos.")
+            
             cursor.execute("SELECT nombre FROM usuarios WHERE id = ?", (user_id,))
             result = cursor.fetchone()
-            conn.close()
+            close_db_connection(conn)
 
             if result:
                 username = result[0]

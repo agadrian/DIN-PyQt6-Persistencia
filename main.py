@@ -1,6 +1,11 @@
 from login import *
 from register import RegisterWindow
-from main_window import MainWindow
+from home import HomeWindow
+import sys
+
+
+#TODO: Quitar marcos de los dialog
+
 
 class MainApp(QMainWindow):
     def __init__(self):
@@ -10,17 +15,19 @@ class MainApp(QMainWindow):
         
         self.stack = QStackedWidget()
         self.setCentralWidget(self.stack)
-        self.stack.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        #self.stack.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        self.stack.setSizePolicy(self.sizePolicy())
 
         
         
         self.login_page = LoginWindow(self)
         self.register_page = RegisterWindow(self)
-        self.main_page = MainWindow()
+        #self.main_page = MainWindow()
         
+
         self.stack.addWidget(self.login_page)
         self.stack.addWidget(self.register_page)
-        self.stack.addWidget(self.main_page)
+        #self.stack.addWidget(self.main_page)
         
         
         self.stack.setCurrentWidget(self.login_page)
@@ -38,7 +45,7 @@ class MainApp(QMainWindow):
     
     def switch_to_main(self):
         self.close()
-        self.mainWindow = MainWindow()
+        self.mainWindow = HomeWindow()
         self.mainWindow.show()
         
 
