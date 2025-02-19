@@ -3,6 +3,7 @@ from PyQt6.QtWidgets import *
 from PyQt6.QtCore import Qt, QPoint
 from PyQt6 import uic  
 from dialogs.userDialog import UserDialog
+from usuarios import usuariosPage
 
 
 
@@ -15,19 +16,26 @@ class HomeWindow(QWidget):
         ruta_ui = os.path.join(os.path.dirname(__file__), "ui", "pages", "stackedTesst.ui")
         uic.loadUi(ruta_ui, self)
 
+
+        ### Crear instancias de cada sub page del stack para que puedan acceder a los elementos de la UI   
+
+        # self.home_page = ......
+        self.users_page = usuariosPage(self)
+        #self.restaurantes_page = ......}
+        # .....
         
 
-        # Conectar botones menú
-        #self.btn_home.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_home)) # Home
+        # Conectar botones de navegación dentro del stackedWidget
+        # self.btn_home.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.home_page))
+        # self.btn_users.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.users_page))
+        # .....
+        
 
         # Cargar la pagina inicial del stacked (será Home)
-        #self.stackedWidget.setCurrentWidget(self.page_home)
-
-        self.btn_addUser_2.clicked.connect(self.open_dialog)
+        # self.stackedWidget.setCurrentWidget(self.page_home)
 
 
-    def open_dialog(self):
-        dialog = UserDialog(self)
-        dialog.exec()        
+        
+        
 
         

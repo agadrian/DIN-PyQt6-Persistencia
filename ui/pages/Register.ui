@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>345</width>
-    <height>380</height>
+    <width>355</width>
+    <height>455</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -110,6 +110,26 @@
       </item>
       <item>
        <widget class="QLineEdit" name="lineEdit_confirmPassword"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_phone">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Phone</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_phone">
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Password</enum>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btn_singup">

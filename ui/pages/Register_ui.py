@@ -23,7 +23,7 @@ class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(345, 380)
+        Form.resize(355, 455)
         Form.setMinimumSize(QSize(345, 380))
         Form.setMaximumSize(QSize(400, 455))
         self.frame = QFrame(Form)
@@ -87,6 +87,19 @@ class Ui_Form(object):
 
         self.verticalLayout.addWidget(self.lineEdit_confirmPassword)
 
+        self.label_phone = QLabel(self.frame)
+        self.label_phone.setObjectName(u"label_phone")
+        sizePolicy.setHeightForWidth(self.label_phone.sizePolicy().hasHeightForWidth())
+        self.label_phone.setSizePolicy(sizePolicy)
+
+        self.verticalLayout.addWidget(self.label_phone)
+
+        self.lineEdit_phone = QLineEdit(self.frame)
+        self.lineEdit_phone.setObjectName(u"lineEdit_phone")
+        self.lineEdit_phone.setEchoMode(QLineEdit.EchoMode.Password)
+
+        self.verticalLayout.addWidget(self.lineEdit_phone)
+
         self.btn_singup = QPushButton(self.frame)
         self.btn_singup.setObjectName(u"btn_singup")
 
@@ -107,6 +120,7 @@ class Ui_Form(object):
         self.label_email.setText(QCoreApplication.translate("Form", u"Email", None))
         self.label_password.setText(QCoreApplication.translate("Form", u"Password", None))
         self.label_password_2.setText(QCoreApplication.translate("Form", u"Confirm Password", None))
+        self.label_phone.setText(QCoreApplication.translate("Form", u"Phone", None))
         self.btn_singup.setText(QCoreApplication.translate("Form", u"Sing up", None))
     # retranslateUi
 

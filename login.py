@@ -21,7 +21,6 @@ class LoginWindow(QWidget):
 
         # Ruta del .ui
         ruta_ui = os.path.join(os.path.dirname(__file__), "ui", "pages", "Login.ui")
-        ruta_ui = os.path.join(os.path.dirname(__file__), "ui", "pages", "Login.ui")
         uic.loadUi(ruta_ui, self)
 
         self.setFixedSize(self.size())
@@ -38,14 +37,13 @@ class LoginWindow(QWidget):
         try:
             # Verificar credenciales en firebase
             user = auth.sign_in_with_email_and_password(email, password)
-            user_id = user["localId"]
 
             # Conexion con sqlite3
             conn, cursor = get_db_connection()
             if conn is None or cursor is None:
                 raise Exception("No se pudo conectar a la base de datos.")
             
-            cursor.execute("SELECT nombre FROM usuarios WHERE id = ?", (user_id,))
+            cursor.execute("SELECT nombre FROM usuarios WHERE email = ?", (email,))
             result = cursor.fetchone()
             close_db_connection(conn)
 

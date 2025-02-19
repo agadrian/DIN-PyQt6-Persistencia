@@ -8,6 +8,7 @@ import json
 import sqlite3
 from login import auth, FIREBASE_ERRORS
 from db_functions import *
+from utils import *
 
 class RegisterWindow(QWidget):
     def __init__(self, main_app):
@@ -25,31 +26,31 @@ class RegisterWindow(QWidget):
 
     
     def register(self):
-        username = self.lineEdit_username.text()
-        email = self.lineEdit_email.text()
-        password = self.lineEdit_password.text()
-        password2 = self.lineEdit_confirmPassword.text()
-    
         try:
-            if password != password2:
-                raise ValueError("Las contraseñas no coinciden")
+
+            username = self.lineEdit_username.text()
+            email = self.lineEdit_email.text()
+            phone = self.lineEdit_phone.text()
+            password = self.lineEdit_password.text()
+            password2 = self.lineEdit_confirmPassword.text()
             
-            # Crear user en fireabse
-            user = auth.create_user_with_email_and_password(email, password)
-            user_id = user["localId"] # Id de firebase
+            comprobaciones_input(username, email, phone, password, password2)
+            
 
             # Gurdarlo en SQLite -> usuarios
             conn, cursor = get_db_connection()
             if conn is None or cursor is None:
                 raise Exception("No se pudo conectar a la base de datos.")
     
-            cursor.execute("INSERT INTO usuarios (id, nombre, email) VALUES (?, ?, ?)", (user_id, username, email))
+            cursor.execute("INSERT INTO usuarios (nombre, email, telefono) VALUES (?, ?, ?)", (username, email, phone))
             conn.commit()
             close_db_connection(conn)
 
+            # Crear user en fireabse
+            user = auth.create_user_with_email_and_password(email, password)
+
             QMessageBox.information(self, "Éxito", f"Usuario registrado correctamente")
             
-
             self.main_app.switch_to_main()
 
 
