@@ -21,7 +21,7 @@ def create_tables():
             nombre TEXT NOT NULL, 
             email TEXT UNIQUE NOT NULL, 
             direccion TEXT, 
-            telefono TEXT UNIQUE NOT NULL,
+            telefono TEXT UNIQUE NULL,
             fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );""",
         

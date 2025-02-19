@@ -47,7 +47,7 @@ class Ui_Form(object):
         self.label = QLabel(self.frame_3)
         self.label.setObjectName(u"label")
         self.label.setMaximumSize(QSize(75, 75))
-        self.label.setPixmap(QPixmap(u"img/logoLogin.png"))
+        self.label.setPixmap(QPixmap(u"../img/logoLogin.png"))
         self.label.setScaledContents(True)
 
         self.horizontalLayout.addWidget(self.label)
