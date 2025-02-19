@@ -54,6 +54,7 @@ class LoginWindow(QWidget):
 
         # Ruta del .ui
         ruta_ui = os.path.join(os.path.dirname(__file__), "ui", "pages", "Login.ui")
+        ruta_ui = os.path.join(os.path.dirname(__file__), "ui", "pages", "Login.ui")
         uic.loadUi(ruta_ui, self)
 
         self.setFixedSize(self.size())
