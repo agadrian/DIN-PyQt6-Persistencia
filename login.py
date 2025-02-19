@@ -46,10 +46,6 @@ FIREBASE_ERRORS = {
 }
 
 
-
-
-
-
 class LoginWindow(QWidget):
 
     def __init__(self, main_app):
@@ -57,7 +53,7 @@ class LoginWindow(QWidget):
         self.main_app = main_app
 
         # Ruta del .ui
-        ruta_ui = os.path.join(os.path.dirname(__file__), "ui", "Login.ui")
+        ruta_ui = os.path.join(os.path.dirname(__file__), "ui", "pages", "Login.ui")
         uic.loadUi(ruta_ui, self)
 
         self.setFixedSize(self.size())
@@ -118,7 +114,7 @@ class RegisterWindow(QWidget):
         self.main_app = main_app
 
         # Ruta del .ui
-        ruta_ui = os.path.join(os.path.dirname(__file__), "ui", "Register.ui")
+        ruta_ui = os.path.join(os.path.dirname(__file__), "ui", "pages", "Register.ui")
         uic.loadUi(ruta_ui, self)
 
         self.setFixedSize(self.size())
@@ -182,7 +178,7 @@ class MainWindow(QWidget):
         super(MainWindow, self).__init__()
         
         # Ruta del .ui
-        ruta_ui = os.path.join(os.path.dirname(__file__), "ui","MainWindow.ui")
+        ruta_ui = os.path.join(os.path.dirname(__file__), "ui", "pages", "stackedTesst.ui")
         uic.loadUi(ruta_ui, self)
 
         #self.setFixedSize(self.size())
