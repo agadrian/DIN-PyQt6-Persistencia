@@ -2,7 +2,7 @@ import os
 from PyQt6.QtWidgets import * 
 from PyQt6.QtCore import Qt, QPoint
 from PyQt6 import uic  
-from dialogs.userDialog import UserDialog
+from dialogs.CreateUserDialog import UserDialog
 from usuarios import usuariosPage
 
 

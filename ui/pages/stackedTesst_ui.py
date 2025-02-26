@@ -37,22 +37,26 @@ class Ui_main_screen_widget(object):
         self.stackedWidget.addWidget(self.page_consultas)
         self.page_usuarios = QWidget()
         self.page_usuarios.setObjectName(u"page_usuarios")
-        self.tableWidget_2 = QTableWidget(self.page_usuarios)
-        if (self.tableWidget_2.columnCount() < 5):
-            self.tableWidget_2.setColumnCount(5)
+        self.tabla_users = QTableWidget(self.page_usuarios)
+        if (self.tabla_users.columnCount() < 7):
+            self.tabla_users.setColumnCount(7)
         __qtablewidgetitem = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        self.tabla_users.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        self.tabla_users.setHorizontalHeaderItem(1, __qtablewidgetitem1)
         __qtablewidgetitem2 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        self.tabla_users.setHorizontalHeaderItem(2, __qtablewidgetitem2)
         __qtablewidgetitem3 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tabla_users.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         __qtablewidgetitem4 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(4, __qtablewidgetitem4)
-        self.tableWidget_2.setObjectName(u"tableWidget_2")
-        self.tableWidget_2.setGeometry(QRect(20, 160, 781, 531))
-        self.tableWidget_2.setStyleSheet(u"QHeaderView::section{\n"
+        self.tabla_users.setHorizontalHeaderItem(4, __qtablewidgetitem4)
+        __qtablewidgetitem5 = QTableWidgetItem()
+        self.tabla_users.setHorizontalHeaderItem(5, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.tabla_users.setHorizontalHeaderItem(6, __qtablewidgetitem6)
+        self.tabla_users.setObjectName(u"tabla_users")
+        self.tabla_users.setGeometry(QRect(20, 160, 781, 531))
+        self.tabla_users.setStyleSheet(u"QHeaderView::section{\n"
 "	font-weight: bold;\n"
 "	background-color: black;\n"
 "	color: white;\n"
@@ -62,20 +66,23 @@ class Ui_main_screen_widget(object):
 "	alternate-background-color: #B0EDFB;\n"
 "	background-color: #F4F9FA;\n"
 "}")
-        self.tableWidget_2.setAlternatingRowColors(True)
-        self.tableWidget_2.horizontalHeader().setVisible(True)
-        self.tableWidget_2.horizontalHeader().setCascadingSectionResizes(False)
-        self.tableWidget_2.horizontalHeader().setDefaultSectionSize(155)
-        self.tableWidget_2.horizontalHeader().setProperty(u"showSortIndicator", False)
-        self.tableWidget_2.horizontalHeader().setStretchLastSection(True)
-        self.tableWidget_2.verticalHeader().setCascadingSectionResizes(False)
-        self.tableWidget_2.verticalHeader().setStretchLastSection(False)
-        self.lineEdit_2 = QLineEdit(self.page_usuarios)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
-        self.lineEdit_2.setGeometry(QRect(530, 100, 271, 35))
-        self.lineEdit_2.setMinimumSize(QSize(0, 35))
-        self.lineEdit_2.setMaximumSize(QSize(16777215, 35))
-        self.lineEdit_2.setStyleSheet(u"QLineEdit{\n"
+        self.tabla_users.setAlternatingRowColors(True)
+        self.tabla_users.setTextElideMode(Qt.TextElideMode.ElideMiddle)
+        self.tabla_users.setColumnCount(7)
+        self.tabla_users.horizontalHeader().setVisible(True)
+        self.tabla_users.horizontalHeader().setCascadingSectionResizes(False)
+        self.tabla_users.horizontalHeader().setDefaultSectionSize(80)
+        self.tabla_users.horizontalHeader().setProperty(u"showSortIndicator", False)
+        self.tabla_users.horizontalHeader().setStretchLastSection(True)
+        self.tabla_users.verticalHeader().setVisible(False)
+        self.tabla_users.verticalHeader().setCascadingSectionResizes(False)
+        self.tabla_users.verticalHeader().setStretchLastSection(False)
+        self.lineEdit_search_email = QLineEdit(self.page_usuarios)
+        self.lineEdit_search_email.setObjectName(u"lineEdit_search_email")
+        self.lineEdit_search_email.setGeometry(QRect(530, 100, 271, 35))
+        self.lineEdit_search_email.setMinimumSize(QSize(0, 35))
+        self.lineEdit_search_email.setMaximumSize(QSize(16777215, 35))
+        self.lineEdit_search_email.setStyleSheet(u"QLineEdit{\n"
 "	padding-left: 10px;\n"
 "	border: 1px solid gray;\n"
 "	border-radius: 10px;\n"
@@ -171,16 +178,16 @@ class Ui_main_screen_widget(object):
         self.tableWidget = QTableWidget(self.page_repartidores)
         if (self.tableWidget.columnCount() < 5):
             self.tableWidget.setColumnCount(5)
-        __qtablewidgetitem5 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem5)
-        __qtablewidgetitem6 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem7)
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem8)
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem8)
         __qtablewidgetitem9 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem9)
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem9)
+        __qtablewidgetitem10 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem10)
+        __qtablewidgetitem11 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem11)
         self.tableWidget.setObjectName(u"tableWidget")
         self.tableWidget.setGeometry(QRect(20, 170, 781, 531))
         self.tableWidget.setStyleSheet(u"QHeaderView::section{\n"
@@ -212,14 +219,14 @@ class Ui_main_screen_widget(object):
 "	border-radius: 10px;\n"
 "}\n"
 "")
-        self.widget = QWidget(self.page_repartidores)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(20, 110, 401, 42))
-        self.horizontalLayout = QHBoxLayout(self.widget)
+        self.layoutWidget1 = QWidget(self.page_repartidores)
+        self.layoutWidget1.setObjectName(u"layoutWidget1")
+        self.layoutWidget1.setGeometry(QRect(20, 110, 401, 42))
+        self.horizontalLayout = QHBoxLayout(self.layoutWidget1)
         self.horizontalLayout.setSpacing(10)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.btn_addUser = QPushButton(self.widget)
+        self.btn_addUser = QPushButton(self.layoutWidget1)
         self.btn_addUser.setObjectName(u"btn_addUser")
         self.btn_addUser.setMinimumSize(QSize(0, 40))
         self.btn_addUser.setStyleSheet(u"QPushButton{\n"
@@ -234,7 +241,7 @@ class Ui_main_screen_widget(object):
 
         self.horizontalLayout.addWidget(self.btn_addUser)
 
-        self.btn_cancel = QPushButton(self.widget)
+        self.btn_cancel = QPushButton(self.layoutWidget1)
         self.btn_cancel.setObjectName(u"btn_cancel")
         self.btn_cancel.setMinimumSize(QSize(0, 40))
         self.btn_cancel.setStyleSheet(u"QPushButton{\n"
@@ -248,7 +255,7 @@ class Ui_main_screen_widget(object):
 
         self.horizontalLayout.addWidget(self.btn_cancel)
 
-        self.btn_cancel_2 = QPushButton(self.widget)
+        self.btn_cancel_2 = QPushButton(self.layoutWidget1)
         self.btn_cancel_2.setObjectName(u"btn_cancel_2")
         self.btn_cancel_2.setMinimumSize(QSize(0, 40))
         self.btn_cancel_2.setStyleSheet(u"QPushButton{\n"
@@ -276,17 +283,21 @@ class Ui_main_screen_widget(object):
     def retranslateUi(self, main_screen_widget):
         main_screen_widget.setWindowTitle(QCoreApplication.translate("main_screen_widget", u"Form", None))
         self.label.setText(QCoreApplication.translate("main_screen_widget", u"Consultas", None))
-        ___qtablewidgetitem = self.tableWidget_2.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("main_screen_widget", u"Name", None));
-        ___qtablewidgetitem1 = self.tableWidget_2.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("main_screen_widget", u"Email", None));
-        ___qtablewidgetitem2 = self.tableWidget_2.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("main_screen_widget", u"Address", None));
-        ___qtablewidgetitem3 = self.tableWidget_2.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("main_screen_widget", u"Phone", None));
-        ___qtablewidgetitem4 = self.tableWidget_2.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("main_screen_widget", u"CreationDate", None));
-        self.lineEdit_2.setPlaceholderText(QCoreApplication.translate("main_screen_widget", u"Search by username, email...", None))
+        ___qtablewidgetitem = self.tabla_users.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("main_screen_widget", u"Id", None));
+        ___qtablewidgetitem1 = self.tabla_users.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("main_screen_widget", u"Username", None));
+        ___qtablewidgetitem2 = self.tabla_users.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("main_screen_widget", u"Email", None));
+        ___qtablewidgetitem3 = self.tabla_users.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("main_screen_widget", u"Address", None));
+        ___qtablewidgetitem4 = self.tabla_users.horizontalHeaderItem(4)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("main_screen_widget", u"Phone", None));
+        ___qtablewidgetitem5 = self.tabla_users.horizontalHeaderItem(5)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("main_screen_widget", u"CreationDate", None));
+        ___qtablewidgetitem6 = self.tabla_users.horizontalHeaderItem(6)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("main_screen_widget", u"Items", None));
+        self.lineEdit_search_email.setPlaceholderText(QCoreApplication.translate("main_screen_widget", u"Search by username or email...", None))
         self.label_6.setText(QCoreApplication.translate("main_screen_widget", u"Users management area", None))
         self.label_5.setText(QCoreApplication.translate("main_screen_widget", u"Users", None))
         self.btn_addUser_2.setText(QCoreApplication.translate("main_screen_widget", u"Add User", None))
@@ -294,16 +305,16 @@ class Ui_main_screen_widget(object):
         self.btn_cancel_4.setText(QCoreApplication.translate("main_screen_widget", u"Export to PDF", None))
         self.label_3.setText(QCoreApplication.translate("main_screen_widget", u"Users", None))
         self.label_4.setText(QCoreApplication.translate("main_screen_widget", u"Users management area", None))
-        ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("main_screen_widget", u"Name", None));
-        ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("main_screen_widget", u"Email", None));
-        ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("main_screen_widget", u"Address", None));
-        ___qtablewidgetitem8 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("main_screen_widget", u"Phone", None));
-        ___qtablewidgetitem9 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("main_screen_widget", u"CreationDate", None));
+        ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("main_screen_widget", u"Name", None));
+        ___qtablewidgetitem8 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("main_screen_widget", u"Email", None));
+        ___qtablewidgetitem9 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("main_screen_widget", u"Address", None));
+        ___qtablewidgetitem10 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("main_screen_widget", u"Phone", None));
+        ___qtablewidgetitem11 = self.tableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("main_screen_widget", u"CreationDate", None));
         self.lineEdit.setPlaceholderText(QCoreApplication.translate("main_screen_widget", u"Search by username, email...", None))
         self.btn_addUser.setText(QCoreApplication.translate("main_screen_widget", u"Add User", None))
         self.btn_cancel.setText(QCoreApplication.translate("main_screen_widget", u"Export to Excel", None))

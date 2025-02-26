@@ -4,7 +4,6 @@ from PyQt6 import uic
 from db_functions import *
 import os
 import json
-import re
 from utils import *
 
 
@@ -12,7 +11,7 @@ class UserDialog(QDialog):
     def __init__(self, parent=None):
         super(UserDialog, self).__init__(parent)
 
-        ruta_ui = os.path.join(os.path.dirname(__file__), "../ui", "dialogs", "UserDialog.ui")
+        ruta_ui = os.path.join(os.path.dirname(__file__), "../ui", "dialogs", "CreateUserDialog.ui")
         uic.loadUi(ruta_ui, self)
 
         self.btn_addUser.clicked.connect(self.insert_new_user)
@@ -26,7 +25,6 @@ class UserDialog(QDialog):
 
     # Insertar usuario
     def insert_new_user(self):
-        user = None
         try:
             username = self.lineEdit_username.text()
             email = self.lineEdit_email.text()
@@ -67,7 +65,8 @@ class UserDialog(QDialog):
             
             mensaje = FIREBASE_ERRORS.get(error_msg, f"Error: {error_msg}")
             QMessageBox.warning(self, "Error", mensaje)
-
+        finally:
+            close_db_connection(conn)
     
 
 

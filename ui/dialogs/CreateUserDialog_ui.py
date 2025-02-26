@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'UserDialog.ui'
+## Form generated from reading UI file 'CreateUserDialog.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.1
 ##
@@ -19,12 +19,12 @@ from PySide6.QtWidgets import (QApplication, QDialog, QFrame, QHBoxLayout,
     QLabel, QLineEdit, QPushButton, QSizePolicy,
     QVBoxLayout, QWidget)
 
-class Ui_TestDialog(object):
-    def setupUi(self, TestDialog):
-        if not TestDialog.objectName():
-            TestDialog.setObjectName(u"TestDialog")
-        TestDialog.resize(542, 580)
-        TestDialog.setStyleSheet(u"QDialog{\n"
+class Ui_AddUserDialog(object):
+    def setupUi(self, AddUserDialog):
+        if not AddUserDialog.objectName():
+            AddUserDialog.setObjectName(u"AddUserDialog")
+        AddUserDialog.resize(542, 580)
+        AddUserDialog.setStyleSheet(u"QDialog{\n"
 "	background-color: white;\n"
 "}\n"
 "\n"
@@ -36,14 +36,14 @@ class Ui_TestDialog(object):
 "}\n"
 "\n"
 "")
-        self.label = QLabel(TestDialog)
+        self.label = QLabel(AddUserDialog)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(30, 20, 151, 31))
         font = QFont()
         font.setPointSize(22)
         font.setBold(True)
         self.label.setFont(font)
-        self.layoutWidget = QWidget(TestDialog)
+        self.layoutWidget = QWidget(AddUserDialog)
         self.layoutWidget.setObjectName(u"layoutWidget")
         self.layoutWidget.setGeometry(QRect(30, 80, 481, 411))
         self.verticalLayout_5 = QVBoxLayout(self.layoutWidget)
@@ -123,7 +123,7 @@ class Ui_TestDialog(object):
 
         self.verticalLayout_5.addLayout(self.verticalLayout_4)
 
-        self.layoutWidget1 = QWidget(TestDialog)
+        self.layoutWidget1 = QWidget(AddUserDialog)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
         self.layoutWidget1.setGeometry(QRect(310, 510, 201, 42))
         self.horizontalLayout = QHBoxLayout(self.layoutWidget1)
@@ -157,25 +157,25 @@ class Ui_TestDialog(object):
 
         self.horizontalLayout.addWidget(self.btn_cancel)
 
-        self.line = QFrame(TestDialog)
+        self.line = QFrame(AddUserDialog)
         self.line.setObjectName(u"line")
         self.line.setGeometry(QRect(0, 60, 541, 20))
         self.line.setFrameShape(QFrame.Shape.HLine)
         self.line.setFrameShadow(QFrame.Shadow.Sunken)
 
-        self.retranslateUi(TestDialog)
+        self.retranslateUi(AddUserDialog)
 
-        QMetaObject.connectSlotsByName(TestDialog)
+        QMetaObject.connectSlotsByName(AddUserDialog)
     # setupUi
 
-    def retranslateUi(self, TestDialog):
-        TestDialog.setWindowTitle(QCoreApplication.translate("TestDialog", u"Dialog", None))
-        self.label.setText(QCoreApplication.translate("TestDialog", u"Add User", None))
-        self.label_2.setText(QCoreApplication.translate("TestDialog", u"Username", None))
-        self.label_3.setText(QCoreApplication.translate("TestDialog", u"Email", None))
-        self.label_4.setText(QCoreApplication.translate("TestDialog", u"Password", None))
-        self.label_5.setText(QCoreApplication.translate("TestDialog", u"Phone", None))
-        self.btn_addUser.setText(QCoreApplication.translate("TestDialog", u"Add User", None))
-        self.btn_cancel.setText(QCoreApplication.translate("TestDialog", u"Cancel", None))
+    def retranslateUi(self, AddUserDialog):
+        AddUserDialog.setWindowTitle(QCoreApplication.translate("AddUserDialog", u"Dialog", None))
+        self.label.setText(QCoreApplication.translate("AddUserDialog", u"Add User", None))
+        self.label_2.setText(QCoreApplication.translate("AddUserDialog", u"Username", None))
+        self.label_3.setText(QCoreApplication.translate("AddUserDialog", u"Email", None))
+        self.label_4.setText(QCoreApplication.translate("AddUserDialog", u"Password", None))
+        self.label_5.setText(QCoreApplication.translate("AddUserDialog", u"Phone", None))
+        self.btn_addUser.setText(QCoreApplication.translate("AddUserDialog", u"Add User", None))
+        self.btn_cancel.setText(QCoreApplication.translate("AddUserDialog", u"Cancel", None))
     # retranslateUi
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>TestDialog</class>
- <widget class="QDialog" name="TestDialog">
+ <class>UpdateUserDialog</class>
+ <widget class="QDialog" name="UpdateUserDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -32,7 +32,7 @@ height: 35px;
     <rect>
      <x>30</x>
      <y>20</y>
-     <width>151</width>
+     <width>191</width>
      <height>31</height>
     </rect>
    </property>
@@ -43,7 +43,7 @@ height: 35px;
     </font>
    </property>
    <property name="text">
-    <string>Add User</string>
+    <string>Update User</string>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget">
@@ -130,12 +130,12 @@ height: 35px;
          </font>
         </property>
         <property name="text">
-         <string>Password</string>
+         <string>Address</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_password">
+       <widget class="QLineEdit" name="lineEdit_address">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -189,15 +189,15 @@ height: 35px;
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>290</x>
      <y>510</y>
-     <width>201</width>
+     <width>221</width>
      <height>42</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QPushButton" name="btn_addUser">
+     <widget class="QPushButton" name="btn_updateUser">
       <property name="minimumSize">
        <size>
         <width>0</width>
@@ -215,7 +215,7 @@ height: 35px;
 }</string>
       </property>
       <property name="text">
-       <string>Add User</string>
+       <string>Update User</string>
       </property>
      </widget>
     </item>

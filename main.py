@@ -6,7 +6,7 @@ import sys
 
 # TODO: Quitar marcos de los dialog
 # TODO: Flecha para volver al login desde el register
-# TODO: Añadir campo telefono en register
+
 
 
 class MainApp(QMainWindow):

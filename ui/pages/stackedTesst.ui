@@ -53,7 +53,7 @@
     </widget>
    </widget>
    <widget class="QWidget" name="page_usuarios">
-    <widget class="QTableWidget" name="tableWidget_2">
+    <widget class="QTableWidget" name="tabla_users">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -77,6 +77,12 @@ QTableWidget{
      <property name="alternatingRowColors">
       <bool>true</bool>
      </property>
+     <property name="textElideMode">
+      <enum>Qt::TextElideMode::ElideMiddle</enum>
+     </property>
+     <property name="columnCount">
+      <number>7</number>
+     </property>
      <attribute name="horizontalHeaderVisible">
       <bool>true</bool>
      </attribute>
@@ -84,13 +90,16 @@ QTableWidget{
       <bool>false</bool>
      </attribute>
      <attribute name="horizontalHeaderDefaultSectionSize">
-      <number>155</number>
+      <number>80</number>
      </attribute>
      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
       <bool>false</bool>
      </attribute>
      <attribute name="horizontalHeaderStretchLastSection">
       <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
      </attribute>
      <attribute name="verticalHeaderCascadingSectionResizes">
       <bool>false</bool>
@@ -100,7 +109,12 @@ QTableWidget{
      </attribute>
      <column>
       <property name="text">
-       <string>Name</string>
+       <string>Id</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Username</string>
       </property>
      </column>
      <column>
@@ -123,8 +137,13 @@ QTableWidget{
        <string>CreationDate</string>
       </property>
      </column>
+     <column>
+      <property name="text">
+       <string>Items</string>
+      </property>
+     </column>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="lineEdit_search_email">
      <property name="geometry">
       <rect>
        <x>530</x>
@@ -154,7 +173,7 @@ QTableWidget{
 </string>
      </property>
      <property name="placeholderText">
-      <string>Search by username, email...</string>
+      <string>Search by username or email...</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_6">
@@ -427,7 +446,7 @@ QTableWidget{
       <string>Search by username, email...</string>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>20</x>

@@ -1,47 +1,118 @@
-from dialogs.userDialog import *
+from dialogs.CreateUserDialog import *
 from db_functions import *
+from utils import *
 
 class usuariosPage:
     def __init__(self, home_window):
         self.home = home_window
-      # Esto imprimirá todos los atributos del objeto home
 
-
+        # Conectar botones
         self.btn_addUser_2 = self.home.btn_addUser_2
         self.btn_addUser_2.clicked.connect(self.open_dialog)
-
-        self.table_usuarios = self.home.findChild(QTableWidget, "table_usuarios")
-        self.load_users()
         
+
+        self.tabla_users = self.home.tabla_users
+
+        
+        # Cargar los usuarios
+        self.load_users()
+
+        # Conectar la funcion de search_by_email con el cambio de input del lineEdit
+        self.home.lineEdit_search_email.textChanged.connect(self.search_by_email)
+
+
+        # Espacio de cada columna de la tabla
+        self.tabla_users.setColumnWidth(0, 40)
+        self.tabla_users.setColumnWidth(1, 100)
+        self.tabla_users.setColumnWidth(2, 130)
+        self.tabla_users.setColumnWidth(3, 130)
+        self.tabla_users.setColumnWidth(4, 100)
+        self.tabla_users.setColumnWidth(5, 100)
+        self.tabla_users.setColumnWidth(6, 100)
     
 
-
+    #~Abre el dialogo para crear nuevo user
     def open_dialog(self):
         dialog = UserDialog(self.home)
-        dialog.exec()        
+        dialog.exec()
+        self.load_users()        
 
     
+    # Cargar todos los usuarios de la db
     def load_users(self):
-        conn, cursor = get_db_connection()
-
         try:
+            conn, cursor = get_db_connection()
 
-            if not self.table_usuarios:
-                raise Exception("Error: 'table_usuarios' no se encontró en la UI.")
+            self.tabla_users.setRowCount(0)
+
+            if not self.tabla_users:
+                raise Exception("Error: 'tabla_users' no se encontró en la UI.")
             
-
-            cursor.execute("SELECT id, nombre, email, telefono, fecha_registro FROM usuarios")
+            cursor.execute("SELECT id, nombre, email, direccion, telefono, fecha_registro FROM usuarios")
             users = cursor.fetchall()
+            print(users) # TODO: BORRAR
 
-            self.table_usuarios.setRowCount(0)
 
-            #self.table_usuarios.setRowCount(len(users))
-            for row_idx, user in enumerate(users):
-                for col_index, data in enumerate(user):
-                    data = QTableWidgetItem(str(data))
-                    self.table_usuarios.setItem(row_idx, col_index, data)
+            for row_index, row_data in enumerate(users):
+                self.tabla_users.insertRow(row_index)
+                for col_index, data in enumerate(row_data):
+                    item = QTableWidgetItem(str(data))
+                    item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+                    item.setFlags(Qt.ItemFlag.ItemIsSelectable | Qt.ItemFlag.ItemIsEnabled)
+                    self.tabla_users.setItem(row_index, col_index, item)
+
+                # Crear los dos iconos finales de editar y eliminar (clase ubicada en utils.py)
+                edit_delete_widget = Edit_delete_widget_function(self, row_index, row_data)
+
+                # Establecer los botones
+                self.tabla_users.setCellWidget(row_index, 6, edit_delete_widget)
+                self.tabla_users.setRowHeight(row_index, 50)
+
         except Exception as e:
             QMessageBox.warning(self.home, "Error", f"Error cargando usuarios: {str(e)}")
-        
         finally:
             close_db_connection(conn)
+
+
+    def search_by_email(self):
+        # Limpiar la tabla
+        self.tabla_users.setRowCount(0)
+
+        # Input del lineedit
+        input = self.home.lineEdit_search_email.text().strip()
+
+        # Si n hay nada escrito, recargar la tabla con todo los datos
+        if not input:
+            self.load_users()
+            return
+            
+
+        # SQL
+        try:
+            conn, cursor = get_db_connection()
+
+            cursor.execute("SELECT * FROM usuarios WHERE email LIKE ? OR nombre LIKE ?", (f"%{input}%", f"%{input}%"))
+            users = cursor.fetchall()
+        
+            # Mostrar filas
+            for row_index, row_data in enumerate(users):
+                self.tabla_users.insertRow(row_index)
+                for col_index, data in enumerate(row_data):
+                    item = QTableWidgetItem(str(data))
+                    item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+                    item.setFlags(Qt.ItemFlag.ItemIsSelectable | Qt.ItemFlag.ItemIsEnabled)
+                    self.tabla_users.setItem(row_index, col_index, item)
+
+                # Crear los dos iconos finales de editar y eliminar (clase ubicada en utils.py)
+                edit_delete_widget = Edit_delete_widget_function(self, row_index, row_data)
+
+                # Establecer los botones
+                self.tabla_users.setCellWidget(row_index, 6, edit_delete_widget)
+                self.tabla_users.setRowHeight(row_index, 50)
+
+        except Exception as e:
+            QMessageBox.warning(self.home, "Error", f"Error: {str(e)}")
+        finally:
+            close_db_connection(conn)
+
+        
