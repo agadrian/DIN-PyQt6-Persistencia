@@ -8,6 +8,8 @@ from dialogs.UpdateRestaurantDialog import UpdateRestaurantDialog
 
 class restaurantesPage:
     def __init__(self, home_window):
+
+
         self.home = home_window
 
         # Conectar botones

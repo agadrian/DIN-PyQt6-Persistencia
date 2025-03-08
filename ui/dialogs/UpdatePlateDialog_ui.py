@@ -169,7 +169,7 @@ class Ui_UpdatePlateDialog(object):
     # setupUi
 
     def retranslateUi(self, UpdatePlateDialog):
-        UpdatePlateDialog.setWindowTitle(QCoreApplication.translate("UpdatePlateDialog", u"Dialog", None))
+        UpdatePlateDialog.setWindowTitle(QCoreApplication.translate("UpdatePlateDialog", u"Update Plate Dialog", None))
         self.label.setText(QCoreApplication.translate("UpdatePlateDialog", u"Update Plate", None))
         self.label_2.setText(QCoreApplication.translate("UpdatePlateDialog", u"Name", None))
         self.label_3.setText(QCoreApplication.translate("UpdatePlateDialog", u"Price", None))

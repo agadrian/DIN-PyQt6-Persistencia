@@ -21,6 +21,8 @@ class HomeWindow(QWidget):
         ruta_ui = os.path.join(os.path.dirname(__file__), "ui", "pages", "stackedTesst.ui")
         uic.loadUi(ruta_ui, self)
 
+        
+
 
         ### Crear instancias de cada sub page del stack para que puedan acceder a los elementos de la UI   
 

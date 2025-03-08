@@ -205,7 +205,7 @@ class Ui_AddRestaurantDialog(object):
     # setupUi
 
     def retranslateUi(self, AddRestaurantDialog):
-        AddRestaurantDialog.setWindowTitle(QCoreApplication.translate("AddRestaurantDialog", u"Dialog", None))
+        AddRestaurantDialog.setWindowTitle(QCoreApplication.translate("AddRestaurantDialog", u"Add restaurant Dialog", None))
         self.label.setText(QCoreApplication.translate("AddRestaurantDialog", u"Add Restaurant", None))
         self.label_2.setText(QCoreApplication.translate("AddRestaurantDialog", u"Name", None))
         self.label_3.setText(QCoreApplication.translate("AddRestaurantDialog", u"Address", None))

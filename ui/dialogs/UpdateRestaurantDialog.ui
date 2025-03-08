@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>542</width>
-    <height>657</height>
+    <width>534</width>
+    <height>659</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Update restaurant Dialog</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog{

@@ -151,7 +151,7 @@ class Ui_AddPedidoDialog(object):
     # setupUi
 
     def retranslateUi(self, AddPedidoDialog):
-        AddPedidoDialog.setWindowTitle(QCoreApplication.translate("AddPedidoDialog", u"Dialog", None))
+        AddPedidoDialog.setWindowTitle(QCoreApplication.translate("AddPedidoDialog", u"Add order Dialog", None))
         self.label.setText(QCoreApplication.translate("AddPedidoDialog", u"Add Order", None))
         self.label_2.setText(QCoreApplication.translate("AddPedidoDialog", u"User ID", None))
         self.label_3.setText(QCoreApplication.translate("AddPedidoDialog", u"Restaurant ID", None))

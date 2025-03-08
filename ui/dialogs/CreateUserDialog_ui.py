@@ -169,7 +169,7 @@ class Ui_AddUserDialog(object):
     # setupUi
 
     def retranslateUi(self, AddUserDialog):
-        AddUserDialog.setWindowTitle(QCoreApplication.translate("AddUserDialog", u"Dialog", None))
+        AddUserDialog.setWindowTitle(QCoreApplication.translate("AddUserDialog", u"Add user Dialog", None))
         self.label.setText(QCoreApplication.translate("AddUserDialog", u"Add User", None))
         self.label_2.setText(QCoreApplication.translate("AddUserDialog", u"Username", None))
         self.label_3.setText(QCoreApplication.translate("AddUserDialog", u"Email", None))

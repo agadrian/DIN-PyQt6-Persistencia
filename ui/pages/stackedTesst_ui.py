@@ -23,9 +23,10 @@ class Ui_main_screen_widget(object):
     def setupUi(self, main_screen_widget):
         if not main_screen_widget.objectName():
             main_screen_widget.setObjectName(u"main_screen_widget")
-        main_screen_widget.resize(840, 740)
-        main_screen_widget.setMinimumSize(QSize(840, 740))
-        main_screen_widget.setMaximumSize(QSize(840, 740))
+        main_screen_widget.resize(845, 740)
+        main_screen_widget.setMinimumSize(QSize(845, 740))
+        main_screen_widget.setMaximumSize(QSize(845, 740))
+        main_screen_widget.setStyleSheet(u"")
         self.stackedWidget = QStackedWidget(main_screen_widget)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setGeometry(QRect(10, 20, 841, 701))
@@ -709,7 +710,7 @@ class Ui_main_screen_widget(object):
 
         self.retranslateUi(main_screen_widget)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(main_screen_widget)

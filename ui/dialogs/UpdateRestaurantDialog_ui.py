@@ -23,7 +23,7 @@ class Ui_UpdateRestaurantDialog(object):
     def setupUi(self, UpdateRestaurantDialog):
         if not UpdateRestaurantDialog.objectName():
             UpdateRestaurantDialog.setObjectName(u"UpdateRestaurantDialog")
-        UpdateRestaurantDialog.resize(542, 657)
+        UpdateRestaurantDialog.resize(534, 659)
         UpdateRestaurantDialog.setStyleSheet(u"QDialog{\n"
 "	background-color: white;\n"
 "}\n"
@@ -205,7 +205,7 @@ class Ui_UpdateRestaurantDialog(object):
     # setupUi
 
     def retranslateUi(self, UpdateRestaurantDialog):
-        UpdateRestaurantDialog.setWindowTitle(QCoreApplication.translate("UpdateRestaurantDialog", u"Dialog", None))
+        UpdateRestaurantDialog.setWindowTitle(QCoreApplication.translate("UpdateRestaurantDialog", u"Update restaurant Dialog", None))
         self.label.setText(QCoreApplication.translate("UpdateRestaurantDialog", u"Update Restaurant", None))
         self.label_2.setText(QCoreApplication.translate("UpdateRestaurantDialog", u"Name", None))
         self.label_3.setText(QCoreApplication.translate("UpdateRestaurantDialog", u"Address", None))

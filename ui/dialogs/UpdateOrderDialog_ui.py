@@ -151,7 +151,7 @@ class Ui_UpdateOrderDialog(object):
     # setupUi
 
     def retranslateUi(self, UpdateOrderDialog):
-        UpdateOrderDialog.setWindowTitle(QCoreApplication.translate("UpdateOrderDialog", u"Dialog", None))
+        UpdateOrderDialog.setWindowTitle(QCoreApplication.translate("UpdateOrderDialog", u"Update order Dialog", None))
         self.label.setText(QCoreApplication.translate("UpdateOrderDialog", u"Update Order", None))
         self.label_2.setText(QCoreApplication.translate("UpdateOrderDialog", u"User ID", None))
         self.label_3.setText(QCoreApplication.translate("UpdateOrderDialog", u"Restaurant ID", None))

@@ -169,7 +169,7 @@ class Ui_UpdateUserDialog(object):
     # setupUi
 
     def retranslateUi(self, UpdateUserDialog):
-        UpdateUserDialog.setWindowTitle(QCoreApplication.translate("UpdateUserDialog", u"Dialog", None))
+        UpdateUserDialog.setWindowTitle(QCoreApplication.translate("UpdateUserDialog", u"Update User Dialog", None))
         self.label.setText(QCoreApplication.translate("UpdateUserDialog", u"Update User", None))
         self.label_2.setText(QCoreApplication.translate("UpdateUserDialog", u"Username", None))
         self.label_3.setText(QCoreApplication.translate("UpdateUserDialog", u"Email", None))

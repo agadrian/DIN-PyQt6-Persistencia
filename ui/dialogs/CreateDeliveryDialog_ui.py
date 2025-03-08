@@ -169,7 +169,7 @@ class Ui_AddDeliveryDialog(object):
     # setupUi
 
     def retranslateUi(self, AddDeliveryDialog):
-        AddDeliveryDialog.setWindowTitle(QCoreApplication.translate("AddDeliveryDialog", u"Dialog", None))
+        AddDeliveryDialog.setWindowTitle(QCoreApplication.translate("AddDeliveryDialog", u"Add Delivery Dialog", None))
         self.label.setText(QCoreApplication.translate("AddDeliveryDialog", u"Add Delivery", None))
         self.label_2.setText(QCoreApplication.translate("AddDeliveryDialog", u"NIF", None))
         self.label_3.setText(QCoreApplication.translate("AddDeliveryDialog", u"Name", None))
