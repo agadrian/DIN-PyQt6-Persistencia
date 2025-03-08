@@ -5,6 +5,7 @@ from PyQt6.QtWidgets import *
 from PyQt6.QtGui import *
 from PyQt6 import uic   
 from dialogs.UpdateUserDialog import UpdateUserDialog
+import os
 
 
 def comprobaciones_input(username, email, phone, password= None, password2 = None):
@@ -73,22 +74,23 @@ class Edit_delete_widget_function(QWidget):
 
         layout = QHBoxLayout(self)
 
-        # Boton edit - blue 
+        # Boton edit
         self.edit_button = QPushButton("", self)
-        #self.edit_button.setStyleSheet("background-color: blue")
         self.edit_button.setFixedSize(60,30)
-        icon = QIcon("ui/lupaa.png")
+        icon = QIcon("ui/img/lupa.png")
         self.edit_button.setIcon(icon)
         self.edit_button.clicked.connect(self.edit_clicked) # Abrir el dialog
 
 
-        # Boton delete - red 
+        # Boton delete
         self.delete_button = QPushButton("", self)
-        #self.delete_button.setStyleSheet("background-color: red")
         self.delete_button.setFixedSize(60,30)
-        icon2 = QIcon("ui/lupaa.png")
+        icon2 = QIcon("ui/img/borrar.png")
         self.delete_button.setIcon(icon2)
         self.delete_button.clicked.connect(self.delete_clicked)
+
+        #self.edit_button.setFlat(True)
+        #self.delete_button.setFlat(True)
 
 
         layout.addWidget(self.edit_button)

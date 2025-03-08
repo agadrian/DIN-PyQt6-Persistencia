@@ -30,10 +30,10 @@ class restaurantesPage:
         self.tabla_restaurants.setColumnWidth(1, 100)
         self.tabla_restaurants.setColumnWidth(2, 130)
         self.tabla_restaurants.setColumnWidth(3, 130)
-        self.tabla_restaurants.setColumnWidth(4, 70)
-        self.tabla_restaurants.setColumnWidth(5, 70)
-        self.tabla_restaurants.setColumnWidth(6, 50)
-        self.tabla_restaurants.setColumnWidth(7, 100)
+        self.tabla_restaurants.setColumnWidth(4, 80)
+        self.tabla_restaurants.setColumnWidth(5, 80)
+        self.tabla_restaurants.setColumnWidth(6, 80)
+        self.tabla_restaurants.setColumnWidth(7, 35)
 
 
     # Abre el dialogo para crear nuevo restaurante

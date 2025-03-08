@@ -318,7 +318,7 @@ height: 35px;
     </rect>
    </property>
    <property name="orientation">
-    <enum>Qt::Orientation::Horizontal</enum>
+    <enum>Qt::Horizontal</enum>
    </property>
   </widget>
  </widget>
