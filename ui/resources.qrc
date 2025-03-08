@@ -1,1 +1,21 @@
-<RCC/>
+<RCC>
+  <qresource prefix="prefix">
+    <file>img/detalles.png</file>
+    <file>img/detalles2.png</file>
+    <file>img/home.png</file>
+    <file>img/home2.png</file>
+    <file>img/logoLogin.png</file>
+    <file>img/lupa.png</file>
+    <file>img/lupa2.png</file>
+    <file>img/pedido.png</file>
+    <file>img/pedido2.png</file>
+    <file>img/plato.png</file>
+    <file>img/plato2.png</file>
+    <file>img/repartidor.png</file>
+    <file>img/repartidor2.png</file>
+    <file>img/restaurante.png</file>
+    <file>img/restaurante2.png</file>
+    <file>img/usuario.png</file>
+    <file>img/usuario2.png</file>
+  </qresource>
+</RCC>

@@ -36,8 +36,3 @@ class HomeWindow(QWidget):
         # Cargar la pagina inicial del stacked (será Home)
         # self.stackedWidget.setCurrentWidget(self.page_home)
 
-
-        
-        
-
-        
