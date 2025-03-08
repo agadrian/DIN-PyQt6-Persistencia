@@ -4,6 +4,7 @@ from PyQt6.QtCore import Qt, QPoint
 from PyQt6 import uic  
 from dialogs.CreateUserDialog import UserDialog
 from usuarios import usuariosPage
+from restaurantes import restaurantesPage
 
 
 
@@ -21,7 +22,8 @@ class HomeWindow(QWidget):
 
         # self.home_page = ......
         self.users_page = usuariosPage(self)
-        #self.restaurantes_page = ......}
+        self.restaurantes_page = restaurantesPage(self)
+        #self.platos_page....
         # .....
         
 

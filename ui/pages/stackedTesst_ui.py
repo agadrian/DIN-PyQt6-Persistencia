@@ -88,19 +88,19 @@ class Ui_main_screen_widget(object):
 "	border-radius: 10px;\n"
 "}\n"
 "")
-        self.label_6 = QLabel(self.page_usuarios)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setGeometry(QRect(20, 50, 221, 41))
+        self.users_management = QLabel(self.page_usuarios)
+        self.users_management.setObjectName(u"users_management")
+        self.users_management.setGeometry(QRect(20, 50, 221, 41))
         font = QFont()
         font.setPointSize(13)
-        self.label_6.setFont(font)
-        self.label_5 = QLabel(self.page_usuarios)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setGeometry(QRect(20, 0, 121, 51))
+        self.users_management.setFont(font)
+        self.users_tittle = QLabel(self.page_usuarios)
+        self.users_tittle.setObjectName(u"users_tittle")
+        self.users_tittle.setGeometry(QRect(20, 0, 121, 51))
         font1 = QFont()
         font1.setPointSize(30)
         font1.setBold(True)
-        self.label_5.setFont(font1)
+        self.users_tittle.setFont(font1)
         self.layoutWidget = QWidget(self.page_usuarios)
         self.layoutWidget.setObjectName(u"layoutWidget")
         self.layoutWidget.setGeometry(QRect(20, 100, 401, 42))
@@ -123,10 +123,10 @@ class Ui_main_screen_widget(object):
 
         self.horizontalLayout_2.addWidget(self.btn_addUser_2)
 
-        self.btn_cancel_3 = QPushButton(self.layoutWidget)
-        self.btn_cancel_3.setObjectName(u"btn_cancel_3")
-        self.btn_cancel_3.setMinimumSize(QSize(0, 40))
-        self.btn_cancel_3.setStyleSheet(u"QPushButton{\n"
+        self.btn_exportToExcel = QPushButton(self.layoutWidget)
+        self.btn_exportToExcel.setObjectName(u"btn_exportToExcel")
+        self.btn_exportToExcel.setMinimumSize(QSize(0, 40))
+        self.btn_exportToExcel.setStyleSheet(u"QPushButton{\n"
 "	background-color: #34D481;\n"
 "	color: white;\n"
 "	border: none;\n"
@@ -135,12 +135,12 @@ class Ui_main_screen_widget(object):
 "	font-size: 15px\n"
 "}")
 
-        self.horizontalLayout_2.addWidget(self.btn_cancel_3)
+        self.horizontalLayout_2.addWidget(self.btn_exportToExcel)
 
-        self.btn_cancel_4 = QPushButton(self.layoutWidget)
-        self.btn_cancel_4.setObjectName(u"btn_cancel_4")
-        self.btn_cancel_4.setMinimumSize(QSize(0, 40))
-        self.btn_cancel_4.setStyleSheet(u"QPushButton{\n"
+        self.btn_exportToPDF = QPushButton(self.layoutWidget)
+        self.btn_exportToPDF.setObjectName(u"btn_exportToPDF")
+        self.btn_exportToPDF.setMinimumSize(QSize(0, 40))
+        self.btn_exportToPDF.setStyleSheet(u"QPushButton{\n"
 "	\n"
 "	background-color: rgb(218, 29, 29);\n"
 "	color: white;\n"
@@ -150,11 +150,123 @@ class Ui_main_screen_widget(object):
 "	font-size: 15px\n"
 "}")
 
-        self.horizontalLayout_2.addWidget(self.btn_cancel_4)
+        self.horizontalLayout_2.addWidget(self.btn_exportToPDF)
 
         self.stackedWidget.addWidget(self.page_usuarios)
         self.page_restaurantes = QWidget()
         self.page_restaurantes.setObjectName(u"page_restaurantes")
+        self.tabla_restaurants = QTableWidget(self.page_restaurantes)
+        if (self.tabla_restaurants.columnCount() < 8):
+            self.tabla_restaurants.setColumnCount(8)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        self.tabla_restaurants.setHorizontalHeaderItem(0, __qtablewidgetitem7)
+        __qtablewidgetitem8 = QTableWidgetItem()
+        self.tabla_restaurants.setHorizontalHeaderItem(1, __qtablewidgetitem8)
+        __qtablewidgetitem9 = QTableWidgetItem()
+        self.tabla_restaurants.setHorizontalHeaderItem(2, __qtablewidgetitem9)
+        __qtablewidgetitem10 = QTableWidgetItem()
+        self.tabla_restaurants.setHorizontalHeaderItem(3, __qtablewidgetitem10)
+        __qtablewidgetitem11 = QTableWidgetItem()
+        self.tabla_restaurants.setHorizontalHeaderItem(4, __qtablewidgetitem11)
+        __qtablewidgetitem12 = QTableWidgetItem()
+        self.tabla_restaurants.setHorizontalHeaderItem(5, __qtablewidgetitem12)
+        __qtablewidgetitem13 = QTableWidgetItem()
+        self.tabla_restaurants.setHorizontalHeaderItem(6, __qtablewidgetitem13)
+        __qtablewidgetitem14 = QTableWidgetItem()
+        self.tabla_restaurants.setHorizontalHeaderItem(7, __qtablewidgetitem14)
+        self.tabla_restaurants.setObjectName(u"tabla_restaurants")
+        self.tabla_restaurants.setGeometry(QRect(20, 160, 781, 531))
+        self.tabla_restaurants.setStyleSheet(u"QHeaderView::section{\n"
+"	font-weight: bold;\n"
+"	background-color: black;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QTableWidget{\n"
+"	alternate-background-color: #B0EDFB;\n"
+"	background-color: #F4F9FA;\n"
+"}")
+        self.tabla_restaurants.setAlternatingRowColors(True)
+        self.tabla_restaurants.setTextElideMode(Qt.TextElideMode.ElideMiddle)
+        self.tabla_restaurants.setColumnCount(8)
+        self.tabla_restaurants.horizontalHeader().setVisible(True)
+        self.tabla_restaurants.horizontalHeader().setCascadingSectionResizes(False)
+        self.tabla_restaurants.horizontalHeader().setDefaultSectionSize(80)
+        self.tabla_restaurants.horizontalHeader().setProperty(u"showSortIndicator", False)
+        self.tabla_restaurants.horizontalHeader().setStretchLastSection(True)
+        self.tabla_restaurants.verticalHeader().setVisible(False)
+        self.tabla_restaurants.verticalHeader().setCascadingSectionResizes(False)
+        self.tabla_restaurants.verticalHeader().setStretchLastSection(False)
+        self.lineEdit_searchByNameCategoryTlfn = QLineEdit(self.page_restaurantes)
+        self.lineEdit_searchByNameCategoryTlfn.setObjectName(u"lineEdit_searchByNameCategoryTlfn")
+        self.lineEdit_searchByNameCategoryTlfn.setGeometry(QRect(530, 100, 271, 35))
+        self.lineEdit_searchByNameCategoryTlfn.setMinimumSize(QSize(0, 35))
+        self.lineEdit_searchByNameCategoryTlfn.setMaximumSize(QSize(16777215, 35))
+        self.lineEdit_searchByNameCategoryTlfn.setStyleSheet(u"QLineEdit{\n"
+"	padding-left: 10px;\n"
+"	border: 1px solid gray;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"")
+        self.restaurant_management = QLabel(self.page_restaurantes)
+        self.restaurant_management.setObjectName(u"restaurant_management")
+        self.restaurant_management.setGeometry(QRect(20, 50, 261, 41))
+        self.restaurant_management.setFont(font)
+        self.layoutWidget_2 = QWidget(self.page_restaurantes)
+        self.layoutWidget_2.setObjectName(u"layoutWidget_2")
+        self.layoutWidget_2.setGeometry(QRect(20, 100, 401, 42))
+        self.horizontalLayout_6 = QHBoxLayout(self.layoutWidget_2)
+        self.horizontalLayout_6.setSpacing(10)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.btn_addRestaurant = QPushButton(self.layoutWidget_2)
+        self.btn_addRestaurant.setObjectName(u"btn_addRestaurant")
+        self.btn_addRestaurant.setMinimumSize(QSize(0, 40))
+        self.btn_addRestaurant.setStyleSheet(u"QPushButton{\n"
+"	\n"
+"	background-color: rgb(0, 0, 0);\n"
+"	color: white;\n"
+"	border: none;\n"
+"	border-radius: 8px;\n"
+"	font-weight: bold;\n"
+"	font-size: 15px\n"
+"}")
+
+        self.horizontalLayout_6.addWidget(self.btn_addRestaurant)
+
+        self.btn_exportToExcel_5 = QPushButton(self.layoutWidget_2)
+        self.btn_exportToExcel_5.setObjectName(u"btn_exportToExcel_5")
+        self.btn_exportToExcel_5.setMinimumSize(QSize(0, 40))
+        self.btn_exportToExcel_5.setStyleSheet(u"QPushButton{\n"
+"	background-color: #34D481;\n"
+"	color: white;\n"
+"	border: none;\n"
+"	border-radius: 8px;\n"
+"	font-weight: bold;\n"
+"	font-size: 15px\n"
+"}")
+
+        self.horizontalLayout_6.addWidget(self.btn_exportToExcel_5)
+
+        self.btn_exportToPDF_5 = QPushButton(self.layoutWidget_2)
+        self.btn_exportToPDF_5.setObjectName(u"btn_exportToPDF_5")
+        self.btn_exportToPDF_5.setMinimumSize(QSize(0, 40))
+        self.btn_exportToPDF_5.setStyleSheet(u"QPushButton{\n"
+"	\n"
+"	background-color: rgb(218, 29, 29);\n"
+"	color: white;\n"
+"	border: none;\n"
+"	border-radius: 8px;\n"
+"	font-weight: bold;\n"
+"	font-size: 15px\n"
+"}")
+
+        self.horizontalLayout_6.addWidget(self.btn_exportToPDF_5)
+
+        self.restaurant_tittle = QLabel(self.page_restaurantes)
+        self.restaurant_tittle.setObjectName(u"restaurant_tittle")
+        self.restaurant_tittle.setGeometry(QRect(20, 0, 241, 51))
+        self.restaurant_tittle.setFont(font1)
         self.stackedWidget.addWidget(self.page_restaurantes)
         self.page_platos = QWidget()
         self.page_platos.setObjectName(u"page_platos")
@@ -178,16 +290,16 @@ class Ui_main_screen_widget(object):
         self.tableWidget = QTableWidget(self.page_repartidores)
         if (self.tableWidget.columnCount() < 5):
             self.tableWidget.setColumnCount(5)
-        __qtablewidgetitem7 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem7)
-        __qtablewidgetitem8 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem8)
-        __qtablewidgetitem9 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem9)
-        __qtablewidgetitem10 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem10)
-        __qtablewidgetitem11 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem11)
+        __qtablewidgetitem15 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem15)
+        __qtablewidgetitem16 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem16)
+        __qtablewidgetitem17 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem17)
+        __qtablewidgetitem18 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem18)
+        __qtablewidgetitem19 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem19)
         self.tableWidget.setObjectName(u"tableWidget")
         self.tableWidget.setGeometry(QRect(20, 170, 781, 531))
         self.tableWidget.setStyleSheet(u"QHeaderView::section{\n"
@@ -274,7 +386,7 @@ class Ui_main_screen_widget(object):
 
         self.retranslateUi(main_screen_widget)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(main_screen_widget)
@@ -298,23 +410,45 @@ class Ui_main_screen_widget(object):
         ___qtablewidgetitem6 = self.tabla_users.horizontalHeaderItem(6)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("main_screen_widget", u"Items", None));
         self.lineEdit_search_email.setPlaceholderText(QCoreApplication.translate("main_screen_widget", u"Search by username or email...", None))
-        self.label_6.setText(QCoreApplication.translate("main_screen_widget", u"Users management area", None))
-        self.label_5.setText(QCoreApplication.translate("main_screen_widget", u"Users", None))
+        self.users_management.setText(QCoreApplication.translate("main_screen_widget", u"Users management area", None))
+        self.users_tittle.setText(QCoreApplication.translate("main_screen_widget", u"Users", None))
         self.btn_addUser_2.setText(QCoreApplication.translate("main_screen_widget", u"Add User", None))
-        self.btn_cancel_3.setText(QCoreApplication.translate("main_screen_widget", u"Export to Excel", None))
-        self.btn_cancel_4.setText(QCoreApplication.translate("main_screen_widget", u"Export to PDF", None))
+        self.btn_exportToExcel.setText(QCoreApplication.translate("main_screen_widget", u"Export to Excel", None))
+        self.btn_exportToPDF.setText(QCoreApplication.translate("main_screen_widget", u"Export to PDF", None))
+        ___qtablewidgetitem7 = self.tabla_restaurants.horizontalHeaderItem(0)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("main_screen_widget", u"Id", None));
+        ___qtablewidgetitem8 = self.tabla_restaurants.horizontalHeaderItem(1)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("main_screen_widget", u"Name", None));
+        ___qtablewidgetitem9 = self.tabla_restaurants.horizontalHeaderItem(2)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("main_screen_widget", u"Address", None));
+        ___qtablewidgetitem10 = self.tabla_restaurants.horizontalHeaderItem(3)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("main_screen_widget", u"Category", None));
+        ___qtablewidgetitem11 = self.tabla_restaurants.horizontalHeaderItem(4)
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("main_screen_widget", u"Phone", None));
+        ___qtablewidgetitem12 = self.tabla_restaurants.horizontalHeaderItem(5)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("main_screen_widget", u"Schedule", None));
+        ___qtablewidgetitem13 = self.tabla_restaurants.horizontalHeaderItem(6)
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("main_screen_widget", u"Qualification", None));
+        ___qtablewidgetitem14 = self.tabla_restaurants.horizontalHeaderItem(7)
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("main_screen_widget", u"Items", None));
+        self.lineEdit_searchByNameCategoryTlfn.setPlaceholderText(QCoreApplication.translate("main_screen_widget", u"Search by name, phone, category...", None))
+        self.restaurant_management.setText(QCoreApplication.translate("main_screen_widget", u"Restaurants management area", None))
+        self.btn_addRestaurant.setText(QCoreApplication.translate("main_screen_widget", u"Add Restaurant", None))
+        self.btn_exportToExcel_5.setText(QCoreApplication.translate("main_screen_widget", u"Export to Excel", None))
+        self.btn_exportToPDF_5.setText(QCoreApplication.translate("main_screen_widget", u"Export to PDF", None))
+        self.restaurant_tittle.setText(QCoreApplication.translate("main_screen_widget", u"Restaurants", None))
         self.label_3.setText(QCoreApplication.translate("main_screen_widget", u"Users", None))
         self.label_4.setText(QCoreApplication.translate("main_screen_widget", u"Users management area", None))
-        ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("main_screen_widget", u"Name", None));
-        ___qtablewidgetitem8 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("main_screen_widget", u"Email", None));
-        ___qtablewidgetitem9 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("main_screen_widget", u"Address", None));
-        ___qtablewidgetitem10 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("main_screen_widget", u"Phone", None));
-        ___qtablewidgetitem11 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("main_screen_widget", u"CreationDate", None));
+        ___qtablewidgetitem15 = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("main_screen_widget", u"Name", None));
+        ___qtablewidgetitem16 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("main_screen_widget", u"Email", None));
+        ___qtablewidgetitem17 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("main_screen_widget", u"Address", None));
+        ___qtablewidgetitem18 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("main_screen_widget", u"Phone", None));
+        ___qtablewidgetitem19 = self.tableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("main_screen_widget", u"CreationDate", None));
         self.lineEdit.setPlaceholderText(QCoreApplication.translate("main_screen_widget", u"Search by username, email...", None))
         self.btn_addUser.setText(QCoreApplication.translate("main_screen_widget", u"Add User", None))
         self.btn_cancel.setText(QCoreApplication.translate("main_screen_widget", u"Export to Excel", None))

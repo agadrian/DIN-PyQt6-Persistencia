@@ -56,12 +56,16 @@ def validar_password(password):
 
 # Crear los botones de editar y eliminar una fila de la tabla
 class Edit_delete_widget_function(QWidget):
-    def __init__(self,parent, row_index, row_data):
+    def __init__(self,parent, row_index, row_data, dialog_class, reload_fun, delete_fun):
         super().__init__()
         self.parent = parent
-        # Instanciar el index y el data 
+
+        # Instanciar el index y el data, y la referencia a el dialogo que debe abrir
         self.row_index = row_index
         self.row_data = row_data
+        self.dialog_class = dialog_class
+        self.reload_fun = reload_fun # Recargar datos
+        self.delete_fun = delete_fun # Eliminar dato
 
         # Variable de la tupla+
         self.item_id = self.row_data[0]
@@ -84,17 +88,26 @@ class Edit_delete_widget_function(QWidget):
         self.delete_button.setFixedSize(60,30)
         icon2 = QIcon("ui/lupaa.png")
         self.delete_button.setIcon(icon2)
+        self.delete_button.clicked.connect(self.delete_clicked)
 
 
         layout.addWidget(self.edit_button)
         layout.addWidget(self.delete_button)
 
 
-    def edit_clicked(self):
-        # Instanciar la clase del UpdateDIalog
-        dialog = UpdateUserDialog(self.item_id, self.row_data)
 
-        # Ejectura el Dialog
+    def edit_clicked(self):
+        
+        # Instaciar la clase (dialog_class) que se le pasa por parametro al llamar a la clase Edit_delete_widget_function
+        dialog = self.dialog_class(self.item_id, self.row_data)
+
+        # Ejectura el Dialog, usando la funcion que se le pasa, para recargar la tabla que en cada caso llame a la funcion.
+        # Esto permite una unica clase y funcion para hacer lo mismo para todos los dialogos, haciendolo mas generico.
+
         if dialog.exec():
-            self.parent.load_users()
+            self.reload_fun()
+
+    def delete_clicked(self):
+        self.delete_fun(self.item_id, self.item_name)
+
 
