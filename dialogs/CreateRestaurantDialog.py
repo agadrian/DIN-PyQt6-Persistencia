@@ -29,7 +29,7 @@ class RestaurantDialog(QDialog):
             schedule = self.lineEdit_schedule.text()
             qual = self.lineEdit_qualification.text()
 
-            ## comprobaciones_input(username, email, phone, password)
+    
 
             # Obtener cursor
             conn, cursor = get_db_connection()
@@ -51,8 +51,6 @@ class RestaurantDialog(QDialog):
         except Exception as e:
             print(e)
             error_msg = str(e)
-
-            #mensaje = FIREBASE_ERRORS.get(error_msg, f"Error: {error_msg}")
             QMessageBox.warning(self, "Error", error_msg)
         finally:
             close_db_connection(conn)

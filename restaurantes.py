@@ -37,7 +37,6 @@ class restaurantesPage:
 
 
     # Abre el dialogo para crear nuevo restaurante
-    # TODO: Dialog restaurant
     def open_dialog(self):
         dialog = RestaurantDialog(self.home)
         dialog.exec()

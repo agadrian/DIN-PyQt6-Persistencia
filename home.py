@@ -5,6 +5,10 @@ from PyQt6 import uic
 from dialogs.CreateUserDialog import UserDialog
 from usuarios import usuariosPage
 from restaurantes import restaurantesPage
+from platos import platosPage
+from pedidos import pedidosPage
+from detalles_pedido import detallesPedidoPage
+from repartidores import repartidoresPage
 
 
 
@@ -23,7 +27,11 @@ class HomeWindow(QWidget):
         # self.home_page = ......
         self.users_page = usuariosPage(self)
         self.restaurantes_page = restaurantesPage(self)
-        #self.platos_page....
+        self.platos_page = platosPage(self)
+        self.pedidos_page = pedidosPage(self)
+        self.detalles_pedido_page = detallesPedidoPage(self)
+        self.repartidores_page = repartidoresPage(self)
+        #self.platos_page....d
         # .....
         
 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>UpdateRestaurantDialog</class>
- <widget class="QDialog" name="UpdateRestaurantDialog">
+ <class>UpdateOrderDetailsDialog</class>
+ <widget class="QDialog" name="UpdateOrderDetailsDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>542</width>
-    <height>657</height>
+    <height>433</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,7 +32,7 @@ height: 35px;
     <rect>
      <x>30</x>
      <y>20</y>
-     <width>271</width>
+     <width>301</width>
      <height>31</height>
     </rect>
    </property>
@@ -43,7 +43,7 @@ height: 35px;
     </font>
    </property>
    <property name="text">
-    <string>Update Restaurant</string>
+    <string>Update Order Details</string>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget">
@@ -52,7 +52,7 @@ height: 35px;
      <x>30</x>
      <y>80</y>
      <width>481</width>
-     <height>491</height>
+     <height>261</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -66,12 +66,12 @@ height: 35px;
          </font>
         </property>
         <property name="text">
-         <string>Name</string>
+         <string>Order ID</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_name">
+       <widget class="QLineEdit" name="lineEdit_orderID">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -98,12 +98,12 @@ height: 35px;
          </font>
         </property>
         <property name="text">
-         <string>Address</string>
+         <string>Plate ID</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_address_2">
+       <widget class="QLineEdit" name="lineEdit_plateID">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -130,108 +130,12 @@ height: 35px;
          </font>
         </property>
         <property name="text">
-         <string>Category</string>
+         <string>Amount</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_category">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>35</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>35</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout_4">
-      <item>
-       <widget class="QLabel" name="label_5">
-        <property name="font">
-         <font>
-          <pointsize>13</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Phone</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_phone">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>35</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>35</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout_6">
-      <item>
-       <widget class="QLabel" name="label_6">
-        <property name="font">
-         <font>
-          <pointsize>13</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Schedule</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_schedule">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>35</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>35</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout_7">
-      <item>
-       <widget class="QLabel" name="label_7">
-        <property name="font">
-         <font>
-          <pointsize>13</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Qualification</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_qualification">
+       <widget class="QLineEdit" name="lineEdit_amount">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -253,15 +157,15 @@ height: 35px;
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>590</y>
-     <width>301</width>
+     <x>180</x>
+     <y>370</y>
+     <width>331</width>
      <height>42</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QPushButton" name="btn_updateRestaurant">
+     <widget class="QPushButton" name="btn_updateOrderDetails">
       <property name="minimumSize">
        <size>
         <width>0</width>
@@ -279,7 +183,7 @@ height: 35px;
 }</string>
       </property>
       <property name="text">
-       <string>Update Restaurant</string>
+       <string>Update Order Details</string>
       </property>
      </widget>
     </item>
