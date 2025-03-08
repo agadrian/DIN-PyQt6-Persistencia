@@ -62,7 +62,7 @@ class usuariosPage:
                     self.tabla_users.setItem(row_index, col_index, item)
 
                 # Crear los dos iconos finales de editar y eliminar (clase ubicada en utils.py)
-                edit_delete_widget = Edit_delete_widget_function(self, row_index, row_data)
+                edit_delete_widget = Edit_delete_widget_function(self, row_index, row_data, UpdateUserDialog, self.load_users, self.delete_user)
 
                 # Establecer los botones
                 self.tabla_users.setCellWidget(row_index, 6, edit_delete_widget)
@@ -104,7 +104,7 @@ class usuariosPage:
                     self.tabla_users.setItem(row_index, col_index, item)
 
                 # Crear los dos iconos finales de editar y eliminar (clase ubicada en utils.py)
-                edit_delete_widget = Edit_delete_widget_function(self, row_index, row_data)
+                edit_delete_widget = Edit_delete_widget_function(self, row_index, row_data, UpdateUserDialog, self.load_users, self.delete_user)
 
                 # Establecer los botones
                 self.tabla_users.setCellWidget(row_index, 6, edit_delete_widget)
@@ -115,4 +115,30 @@ class usuariosPage:
         finally:
             close_db_connection(conn)
 
+
+
         
+    def delete_user(self, user_id, user_name):
+        reply = QMessageBox.question(
+            self.home,
+            "Eliminar usuario",
+            f"¿Estás seguro de que quieres eliminar '{user_name}'?",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+            QMessageBox.StandardButton.No
+        )
+
+        if reply == QMessageBox.StandardButton.Yes:
+            try:
+                conn, cursor = get_db_connection()
+                cursor.execute("DELETE FROM usuarios WHERE id = ?", (user_id,))
+                conn.commit()
+
+                QMessageBox.information(self.home, "Eliminado", f"'{user_name}' ha sido eliminado correctamente.")
+
+                self.load_users()  # Recargar la tabla
+
+            except Exception as e:
+                QMessageBox.warning(self.home, "Error", f"Error al eliminar: {str(e)}")
+
+            finally:
+                close_db_connection(conn)
