@@ -46,7 +46,7 @@ class HomeWindow(QMainWindow):
         self.btn_delivery.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(7))
 
         # Cargar la pagina inicial del stacked (será Home)
-        self.stackedWidget.setCurrentWidget(self.page_home)
+        self.stackedWidget.setCurrentWidget(self.page_usuarios)
         
 
        
