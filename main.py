@@ -43,6 +43,8 @@ class MainApp(QMainWindow):
         self.close()
         self.mainWindow = HomeWindow()
         self.mainWindow.show()
+
+        #self.stack.setCurrentWidget(HomeWindow())
         
 
 if __name__ == "__main__":
