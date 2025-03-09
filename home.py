@@ -31,17 +31,11 @@ class HomeWindow(QMainWindow):
         self.pedidos_page = pedidosPage(self)
         self.detalles_pedido_page = detallesPedidoPage(self)
         self.repartidores_page = repartidoresPage(self)
-
-        self.stackedWidget.addWidget(self.users_page)
-        '''self.stackedWidget.addWidget(self.restaurantes_page)
-        self.stackedWidget.addWidget(self.platos_page)
-        self.stackedWidget.addWidget(self.pedidos_page)
-        self.stackedWidget.addWidget(self.detalles_pedido_page)
-        self.stackedWidget.addWidget(self.repartidores_page)'''
-
        
 
-
+        self.home_page = Ui_MainWindow()
+        self.home_page.setupUi(self)
+        
 
         # Conectar botones de navegación dentro del stackedWidget
         self.btn_users.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(2))

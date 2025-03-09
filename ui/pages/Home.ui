@@ -32,6 +32,9 @@
      <property name="geometry">
       <rect>
        <x>30</x>
+       <y>90</y>
+       <width>175</width>
+       <height>863</height>
        <y>110</y>
        <width>177</width>
        <height>1432</height>
@@ -63,8 +66,8 @@
           </property>
           <property name="iconSize">
            <size>
-            <width>150</width>
-            <height>150</height>
+            <width>80</width>
+            <height>77</height>
            </size>
           </property>
          </widget>
@@ -83,8 +86,8 @@
           </property>
           <property name="iconSize">
            <size>
-            <width>150</width>
-            <height>150</height>
+            <width>80</width>
+            <height>80</height>
            </size>
           </property>
          </widget>
@@ -103,8 +106,8 @@
           </property>
           <property name="iconSize">
            <size>
-            <width>150</width>
-            <height>150</height>
+            <width>80</width>
+            <height>80</height>
            </size>
           </property>
          </widget>
@@ -123,8 +126,8 @@
           </property>
           <property name="iconSize">
            <size>
-            <width>150</width>
-            <height>150</height>
+            <width>80</width>
+            <height>80</height>
            </size>
           </property>
          </widget>
@@ -143,8 +146,8 @@
           </property>
           <property name="iconSize">
            <size>
-            <width>150</width>
-            <height>150</height>
+            <width>80</width>
+            <height>80</height>
            </size>
           </property>
          </widget>
@@ -163,8 +166,8 @@
           </property>
           <property name="iconSize">
            <size>
-            <width>150</width>
-            <height>150</height>
+            <width>80</width>
+            <height>80</height>
            </size>
           </property>
          </widget>
@@ -183,8 +186,8 @@
           </property>
           <property name="iconSize">
            <size>
-            <width>150</width>
-            <height>150</height>
+            <width>80</width>
+            <height>80</height>
            </size>
           </property>
          </widget>
@@ -203,8 +206,8 @@
           </property>
           <property name="iconSize">
            <size>
-            <width>150</width>
-            <height>150</height>
+            <width>80</width>
+            <height>80</height>
            </size>
           </property>
          </widget>
@@ -225,8 +228,8 @@
         </property>
         <property name="iconSize">
          <size>
-          <width>150</width>
-          <height>150</height>
+          <width>80</width>
+          <height>80</height>
          </size>
         </property>
        </widget>
@@ -274,21 +277,6 @@
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="page_home">
-      <widget class="QLabel" name="label_2">
-       <property name="geometry">
-        <rect>
-         <x>110</x>
-         <y>150</y>
-         <width>251</width>
-         <height>121</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Page home</string>
-       </property>
-      </widget>
-     </widget>
      <widget class="QWidget" name="page_consultas">
       <widget class="QLabel" name="users_tittle_2">
        <property name="geometry">
