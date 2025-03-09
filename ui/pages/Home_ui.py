@@ -175,7 +175,7 @@ class Ui_MainWindow(object):
         self.users_tittle.setFont(font1)
         self.layoutWidget = QWidget(self.page_usuarios)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(20, 100, 401, 42))
+        self.layoutWidget.setGeometry(QRect(20, 100, 271, 42))
         self.horizontalLayout_2 = QHBoxLayout(self.layoutWidget)
         self.horizontalLayout_2.setSpacing(10)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
@@ -191,23 +191,14 @@ class Ui_MainWindow(object):
 "	border-radius: 8px;\n"
 "	font-weight: bold;\n"
 "	font-size: 15px\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(50, 50, 50);\n"
+"    cursor: pointer; \n"
 "}")
 
         self.horizontalLayout_2.addWidget(self.btn_addUser_2)
-
-        self.btn_exportToExcel = QPushButton(self.layoutWidget)
-        self.btn_exportToExcel.setObjectName(u"btn_exportToExcel")
-        self.btn_exportToExcel.setMinimumSize(QSize(0, 40))
-        self.btn_exportToExcel.setStyleSheet(u"QPushButton{\n"
-"	background-color: #34D481;\n"
-"	color: white;\n"
-"	border: none;\n"
-"	border-radius: 8px;\n"
-"	font-weight: bold;\n"
-"	font-size: 15px\n"
-"}")
-
-        self.horizontalLayout_2.addWidget(self.btn_exportToExcel)
 
         self.btn_exportToPDF = QPushButton(self.layoutWidget)
         self.btn_exportToPDF.setObjectName(u"btn_exportToPDF")
@@ -219,7 +210,12 @@ class Ui_MainWindow(object):
 "	border: none;\n"
 "	border-radius: 8px;\n"
 "	font-weight: bold;\n"
-"	font-size: 15px\n"
+"	font-size: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(255, 56, 56); \n"
+"    cursor: pointer; \n"
 "}")
 
         self.horizontalLayout_2.addWidget(self.btn_exportToPDF)
@@ -286,7 +282,7 @@ class Ui_MainWindow(object):
         self.restaurant_management.setFont(font)
         self.layoutWidget_2 = QWidget(self.page_restaurantes)
         self.layoutWidget_2.setObjectName(u"layoutWidget_2")
-        self.layoutWidget_2.setGeometry(QRect(20, 100, 401, 42))
+        self.layoutWidget_2.setGeometry(QRect(20, 100, 271, 42))
         self.horizontalLayout_6 = QHBoxLayout(self.layoutWidget_2)
         self.horizontalLayout_6.setSpacing(10)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
@@ -302,23 +298,14 @@ class Ui_MainWindow(object):
 "	border-radius: 8px;\n"
 "	font-weight: bold;\n"
 "	font-size: 15px\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(50, 50, 50);\n"
+"    cursor: pointer; \n"
 "}")
 
         self.horizontalLayout_6.addWidget(self.btn_addRestaurant)
-
-        self.btn_exportToExcel_5 = QPushButton(self.layoutWidget_2)
-        self.btn_exportToExcel_5.setObjectName(u"btn_exportToExcel_5")
-        self.btn_exportToExcel_5.setMinimumSize(QSize(0, 40))
-        self.btn_exportToExcel_5.setStyleSheet(u"QPushButton{\n"
-"	background-color: #34D481;\n"
-"	color: white;\n"
-"	border: none;\n"
-"	border-radius: 8px;\n"
-"	font-weight: bold;\n"
-"	font-size: 15px\n"
-"}")
-
-        self.horizontalLayout_6.addWidget(self.btn_exportToExcel_5)
 
         self.btn_exportToPDF_5 = QPushButton(self.layoutWidget_2)
         self.btn_exportToPDF_5.setObjectName(u"btn_exportToPDF_5")
@@ -330,7 +317,12 @@ class Ui_MainWindow(object):
 "	border: none;\n"
 "	border-radius: 8px;\n"
 "	font-weight: bold;\n"
-"	font-size: 15px\n"
+"	font-size: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(255, 56, 56); \n"
+"    cursor: pointer; \n"
 "}")
 
         self.horizontalLayout_6.addWidget(self.btn_exportToPDF_5)
@@ -397,7 +389,7 @@ class Ui_MainWindow(object):
         self.plates_tittle.setFont(font1)
         self.layoutWidget_3 = QWidget(self.page_platos)
         self.layoutWidget_3.setObjectName(u"layoutWidget_3")
-        self.layoutWidget_3.setGeometry(QRect(20, 100, 401, 42))
+        self.layoutWidget_3.setGeometry(QRect(20, 100, 271, 42))
         self.horizontalLayout_7 = QHBoxLayout(self.layoutWidget_3)
         self.horizontalLayout_7.setSpacing(10)
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
@@ -413,23 +405,14 @@ class Ui_MainWindow(object):
 "	border-radius: 8px;\n"
 "	font-weight: bold;\n"
 "	font-size: 15px\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(50, 50, 50);\n"
+"    cursor: pointer; \n"
 "}")
 
         self.horizontalLayout_7.addWidget(self.btn_addPlate)
-
-        self.btn_exportToExcel_2 = QPushButton(self.layoutWidget_3)
-        self.btn_exportToExcel_2.setObjectName(u"btn_exportToExcel_2")
-        self.btn_exportToExcel_2.setMinimumSize(QSize(0, 40))
-        self.btn_exportToExcel_2.setStyleSheet(u"QPushButton{\n"
-"	background-color: #34D481;\n"
-"	color: white;\n"
-"	border: none;\n"
-"	border-radius: 8px;\n"
-"	font-weight: bold;\n"
-"	font-size: 15px\n"
-"}")
-
-        self.horizontalLayout_7.addWidget(self.btn_exportToExcel_2)
 
         self.btn_exportToPDF_2 = QPushButton(self.layoutWidget_3)
         self.btn_exportToPDF_2.setObjectName(u"btn_exportToPDF_2")
@@ -441,7 +424,12 @@ class Ui_MainWindow(object):
 "	border: none;\n"
 "	border-radius: 8px;\n"
 "	font-weight: bold;\n"
-"	font-size: 15px\n"
+"	font-size: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(255, 56, 56); \n"
+"    cursor: pointer; \n"
 "}")
 
         self.horizontalLayout_7.addWidget(self.btn_exportToPDF_2)
@@ -510,7 +498,7 @@ class Ui_MainWindow(object):
         self.plates_tittle_2.setFont(font1)
         self.layoutWidget_4 = QWidget(self.page_pedidos)
         self.layoutWidget_4.setObjectName(u"layoutWidget_4")
-        self.layoutWidget_4.setGeometry(QRect(20, 100, 401, 42))
+        self.layoutWidget_4.setGeometry(QRect(20, 100, 271, 42))
         self.horizontalLayout_8 = QHBoxLayout(self.layoutWidget_4)
         self.horizontalLayout_8.setSpacing(10)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
@@ -526,23 +514,14 @@ class Ui_MainWindow(object):
 "	border-radius: 8px;\n"
 "	font-weight: bold;\n"
 "	font-size: 15px\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(50, 50, 50);\n"
+"    cursor: pointer; \n"
 "}")
 
         self.horizontalLayout_8.addWidget(self.btn_addOrder)
-
-        self.btn_exportToExcel_3 = QPushButton(self.layoutWidget_4)
-        self.btn_exportToExcel_3.setObjectName(u"btn_exportToExcel_3")
-        self.btn_exportToExcel_3.setMinimumSize(QSize(0, 40))
-        self.btn_exportToExcel_3.setStyleSheet(u"QPushButton{\n"
-"	background-color: #34D481;\n"
-"	color: white;\n"
-"	border: none;\n"
-"	border-radius: 8px;\n"
-"	font-weight: bold;\n"
-"	font-size: 15px\n"
-"}")
-
-        self.horizontalLayout_8.addWidget(self.btn_exportToExcel_3)
 
         self.btn_exportToPDF_3 = QPushButton(self.layoutWidget_4)
         self.btn_exportToPDF_3.setObjectName(u"btn_exportToPDF_3")
@@ -554,7 +533,12 @@ class Ui_MainWindow(object):
 "	border: none;\n"
 "	border-radius: 8px;\n"
 "	font-weight: bold;\n"
-"	font-size: 15px\n"
+"	font-size: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(255, 56, 56); \n"
+"    cursor: pointer; \n"
 "}")
 
         self.horizontalLayout_8.addWidget(self.btn_exportToPDF_3)
@@ -568,7 +552,7 @@ class Ui_MainWindow(object):
         self.plates_management_3.setFont(font)
         self.layoutWidget_5 = QWidget(self.page_detallesPedidos)
         self.layoutWidget_5.setObjectName(u"layoutWidget_5")
-        self.layoutWidget_5.setGeometry(QRect(20, 100, 421, 42))
+        self.layoutWidget_5.setGeometry(QRect(20, 100, 321, 42))
         self.horizontalLayout_9 = QHBoxLayout(self.layoutWidget_5)
         self.horizontalLayout_9.setSpacing(10)
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
@@ -584,23 +568,14 @@ class Ui_MainWindow(object):
 "	border-radius: 8px;\n"
 "	font-weight: bold;\n"
 "	font-size: 15px\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(50, 50, 50);\n"
+"    cursor: pointer; \n"
 "}")
 
         self.horizontalLayout_9.addWidget(self.btn_addOrderDetails)
-
-        self.btn_exportToExcel_4 = QPushButton(self.layoutWidget_5)
-        self.btn_exportToExcel_4.setObjectName(u"btn_exportToExcel_4")
-        self.btn_exportToExcel_4.setMinimumSize(QSize(0, 40))
-        self.btn_exportToExcel_4.setStyleSheet(u"QPushButton{\n"
-"	background-color: #34D481;\n"
-"	color: white;\n"
-"	border: none;\n"
-"	border-radius: 8px;\n"
-"	font-weight: bold;\n"
-"	font-size: 15px\n"
-"}")
-
-        self.horizontalLayout_9.addWidget(self.btn_exportToExcel_4)
 
         self.btn_exportToPDF_4 = QPushButton(self.layoutWidget_5)
         self.btn_exportToPDF_4.setObjectName(u"btn_exportToPDF_4")
@@ -612,7 +587,12 @@ class Ui_MainWindow(object):
 "	border: none;\n"
 "	border-radius: 8px;\n"
 "	font-weight: bold;\n"
-"	font-size: 15px\n"
+"	font-size: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(255, 56, 56); \n"
+"    cursor: pointer; \n"
 "}")
 
         self.horizontalLayout_9.addWidget(self.btn_exportToPDF_4)
@@ -728,7 +708,7 @@ class Ui_MainWindow(object):
 "")
         self.layoutWidget_6 = QWidget(self.page_repartidores)
         self.layoutWidget_6.setObjectName(u"layoutWidget_6")
-        self.layoutWidget_6.setGeometry(QRect(20, 100, 401, 42))
+        self.layoutWidget_6.setGeometry(QRect(20, 100, 271, 42))
         self.horizontalLayout = QHBoxLayout(self.layoutWidget_6)
         self.horizontalLayout.setSpacing(10)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
@@ -744,23 +724,14 @@ class Ui_MainWindow(object):
 "	border-radius: 8px;\n"
 "	font-weight: bold;\n"
 "	font-size: 15px\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(50, 50, 50);\n"
+"    cursor: pointer; \n"
 "}")
 
         self.horizontalLayout.addWidget(self.btn_addDelivery)
-
-        self.btn_exportExcel = QPushButton(self.layoutWidget_6)
-        self.btn_exportExcel.setObjectName(u"btn_exportExcel")
-        self.btn_exportExcel.setMinimumSize(QSize(0, 40))
-        self.btn_exportExcel.setStyleSheet(u"QPushButton{\n"
-"	background-color: #34D481;\n"
-"	color: white;\n"
-"	border: none;\n"
-"	border-radius: 8px;\n"
-"	font-weight: bold;\n"
-"	font-size: 15px\n"
-"}")
-
-        self.horizontalLayout.addWidget(self.btn_exportExcel)
 
         self.btn_exportPDF = QPushButton(self.layoutWidget_6)
         self.btn_exportPDF.setObjectName(u"btn_exportPDF")
@@ -772,7 +743,12 @@ class Ui_MainWindow(object):
 "	border: none;\n"
 "	border-radius: 8px;\n"
 "	font-weight: bold;\n"
-"	font-size: 15px\n"
+"	font-size: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(255, 56, 56); \n"
+"    cursor: pointer; \n"
 "}")
 
         self.horizontalLayout.addWidget(self.btn_exportPDF)
@@ -820,7 +796,6 @@ class Ui_MainWindow(object):
         self.users_management.setText(QCoreApplication.translate("MainWindow", u"Users management area", None))
         self.users_tittle.setText(QCoreApplication.translate("MainWindow", u"Users", None))
         self.btn_addUser_2.setText(QCoreApplication.translate("MainWindow", u"Add User", None))
-        self.btn_exportToExcel.setText(QCoreApplication.translate("MainWindow", u"Export to Excel", None))
         self.btn_exportToPDF.setText(QCoreApplication.translate("MainWindow", u"Export to PDF", None))
         ___qtablewidgetitem7 = self.tabla_restaurants.horizontalHeaderItem(0)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Id", None));
@@ -841,7 +816,6 @@ class Ui_MainWindow(object):
         self.lineEdit_searchByNameCategoryTlfn.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Search by name, phone, category...", None))
         self.restaurant_management.setText(QCoreApplication.translate("MainWindow", u"Restaurants management area", None))
         self.btn_addRestaurant.setText(QCoreApplication.translate("MainWindow", u"Add Restaurant", None))
-        self.btn_exportToExcel_5.setText(QCoreApplication.translate("MainWindow", u"Export to Excel", None))
         self.btn_exportToPDF_5.setText(QCoreApplication.translate("MainWindow", u"Export to PDF", None))
         self.restaurant_tittle.setText(QCoreApplication.translate("MainWindow", u"Restaurants", None))
         ___qtablewidgetitem15 = self.tabla_plates.horizontalHeaderItem(0)
@@ -859,7 +833,6 @@ class Ui_MainWindow(object):
         self.lineEdit_searchByNameDescription.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Search by name, description ...", None))
         self.plates_tittle.setText(QCoreApplication.translate("MainWindow", u"Plates", None))
         self.btn_addPlate.setText(QCoreApplication.translate("MainWindow", u"Add Plate", None))
-        self.btn_exportToExcel_2.setText(QCoreApplication.translate("MainWindow", u"Export to Excel", None))
         self.btn_exportToPDF_2.setText(QCoreApplication.translate("MainWindow", u"Export to PDF", None))
         self.plates_management.setText(QCoreApplication.translate("MainWindow", u"Plates management area", None))
         ___qtablewidgetitem21 = self.tabla_orders.horizontalHeaderItem(0)
@@ -877,11 +850,9 @@ class Ui_MainWindow(object):
         self.plates_management_2.setText(QCoreApplication.translate("MainWindow", u"Orders management area", None))
         self.plates_tittle_2.setText(QCoreApplication.translate("MainWindow", u"Orders", None))
         self.btn_addOrder.setText(QCoreApplication.translate("MainWindow", u"Add Order", None))
-        self.btn_exportToExcel_3.setText(QCoreApplication.translate("MainWindow", u"Export to Excel", None))
         self.btn_exportToPDF_3.setText(QCoreApplication.translate("MainWindow", u"Export to PDF", None))
         self.plates_management_3.setText(QCoreApplication.translate("MainWindow", u"Orders details management area", None))
         self.btn_addOrderDetails.setText(QCoreApplication.translate("MainWindow", u"Add Order Details", None))
-        self.btn_exportToExcel_4.setText(QCoreApplication.translate("MainWindow", u"Export to Excel", None))
         self.btn_exportToPDF_4.setText(QCoreApplication.translate("MainWindow", u"Export to PDF", None))
         self.plates_tittle_3.setText(QCoreApplication.translate("MainWindow", u"Orders Details", None))
         self.lineEdit_searchByOrderID.setText("")
@@ -912,7 +883,6 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem36.setText(QCoreApplication.translate("MainWindow", u"Items", None));
         self.lineEdit_searchBy.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Search by NIF, name ...", None))
         self.btn_addDelivery.setText(QCoreApplication.translate("MainWindow", u"Add Delivery", None))
-        self.btn_exportExcel.setText(QCoreApplication.translate("MainWindow", u"Export to Excel", None))
         self.btn_exportPDF.setText(QCoreApplication.translate("MainWindow", u"Export to PDF", None))
     # retranslateUi
 

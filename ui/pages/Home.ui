@@ -438,7 +438,7 @@ QTableWidget{
         <rect>
          <x>20</x>
          <y>100</y>
-         <width>401</width>
+         <width>271</width>
          <height>42</height>
         </rect>
        </property>
@@ -463,33 +463,15 @@ QTableWidget{
 	border-radius: 8px;
 	font-weight: bold;
 	font-size: 15px
+}
+
+QPushButton:hover {
+    background-color: rgb(50, 50, 50);
+    cursor: pointer; 
 }</string>
           </property>
           <property name="text">
            <string>Add User</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="btn_exportToExcel">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>40</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton{
-	background-color: #34D481;
-	color: white;
-	border: none;
-	border-radius: 8px;
-	font-weight: bold;
-	font-size: 15px
-}</string>
-          </property>
-          <property name="text">
-           <string>Export to Excel</string>
           </property>
          </widget>
         </item>
@@ -509,7 +491,12 @@ QTableWidget{
 	border: none;
 	border-radius: 8px;
 	font-weight: bold;
-	font-size: 15px
+	font-size: 15px;
+}
+
+QPushButton:hover {
+    background-color: rgb(255, 56, 56); 
+    cursor: pointer; 
 }</string>
           </property>
           <property name="text">
@@ -672,7 +659,7 @@ QTableWidget{
         <rect>
          <x>20</x>
          <y>100</y>
-         <width>401</width>
+         <width>271</width>
          <height>42</height>
         </rect>
        </property>
@@ -697,33 +684,15 @@ QTableWidget{
 	border-radius: 8px;
 	font-weight: bold;
 	font-size: 15px
+}
+
+QPushButton:hover {
+    background-color: rgb(50, 50, 50);
+    cursor: pointer; 
 }</string>
           </property>
           <property name="text">
            <string>Add Restaurant</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="btn_exportToExcel_5">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>40</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton{
-	background-color: #34D481;
-	color: white;
-	border: none;
-	border-radius: 8px;
-	font-weight: bold;
-	font-size: 15px
-}</string>
-          </property>
-          <property name="text">
-           <string>Export to Excel</string>
           </property>
          </widget>
         </item>
@@ -743,7 +712,12 @@ QTableWidget{
 	border: none;
 	border-radius: 8px;
 	font-weight: bold;
-	font-size: 15px
+	font-size: 15px;
+}
+
+QPushButton:hover {
+    background-color: rgb(255, 56, 56); 
+    cursor: pointer; 
 }</string>
           </property>
           <property name="text">
@@ -916,7 +890,7 @@ QTableWidget{
         <rect>
          <x>20</x>
          <y>100</y>
-         <width>401</width>
+         <width>271</width>
          <height>42</height>
         </rect>
        </property>
@@ -941,33 +915,15 @@ QTableWidget{
 	border-radius: 8px;
 	font-weight: bold;
 	font-size: 15px
+}
+
+QPushButton:hover {
+    background-color: rgb(50, 50, 50);
+    cursor: pointer; 
 }</string>
           </property>
           <property name="text">
            <string>Add Plate</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="btn_exportToExcel_2">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>40</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton{
-	background-color: #34D481;
-	color: white;
-	border: none;
-	border-radius: 8px;
-	font-weight: bold;
-	font-size: 15px
-}</string>
-          </property>
-          <property name="text">
-           <string>Export to Excel</string>
           </property>
          </widget>
         </item>
@@ -987,7 +943,12 @@ QTableWidget{
 	border: none;
 	border-radius: 8px;
 	font-weight: bold;
-	font-size: 15px
+	font-size: 15px;
+}
+
+QPushButton:hover {
+    background-color: rgb(255, 56, 56); 
+    cursor: pointer; 
 }</string>
           </property>
           <property name="text">
@@ -1175,7 +1136,7 @@ QTableWidget{
         <rect>
          <x>20</x>
          <y>100</y>
-         <width>401</width>
+         <width>271</width>
          <height>42</height>
         </rect>
        </property>
@@ -1200,33 +1161,15 @@ QTableWidget{
 	border-radius: 8px;
 	font-weight: bold;
 	font-size: 15px
+}
+
+QPushButton:hover {
+    background-color: rgb(50, 50, 50);
+    cursor: pointer; 
 }</string>
           </property>
           <property name="text">
            <string>Add Order</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="btn_exportToExcel_3">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>40</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton{
-	background-color: #34D481;
-	color: white;
-	border: none;
-	border-radius: 8px;
-	font-weight: bold;
-	font-size: 15px
-}</string>
-          </property>
-          <property name="text">
-           <string>Export to Excel</string>
           </property>
          </widget>
         </item>
@@ -1246,7 +1189,12 @@ QTableWidget{
 	border: none;
 	border-radius: 8px;
 	font-weight: bold;
-	font-size: 15px
+	font-size: 15px;
+}
+
+QPushButton:hover {
+    background-color: rgb(255, 56, 56); 
+    cursor: pointer; 
 }</string>
           </property>
           <property name="text">
@@ -1281,7 +1229,7 @@ QTableWidget{
         <rect>
          <x>20</x>
          <y>100</y>
-         <width>421</width>
+         <width>321</width>
          <height>42</height>
         </rect>
        </property>
@@ -1306,33 +1254,15 @@ QTableWidget{
 	border-radius: 8px;
 	font-weight: bold;
 	font-size: 15px
+}
+
+QPushButton:hover {
+    background-color: rgb(50, 50, 50);
+    cursor: pointer; 
 }</string>
           </property>
           <property name="text">
            <string>Add Order Details</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="btn_exportToExcel_4">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>40</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton{
-	background-color: #34D481;
-	color: white;
-	border: none;
-	border-radius: 8px;
-	font-weight: bold;
-	font-size: 15px
-}</string>
-          </property>
-          <property name="text">
-           <string>Export to Excel</string>
           </property>
          </widget>
         </item>
@@ -1352,7 +1282,12 @@ QTableWidget{
 	border: none;
 	border-radius: 8px;
 	font-weight: bold;
-	font-size: 15px
+	font-size: 15px;
+}
+
+QPushButton:hover {
+    background-color: rgb(255, 56, 56); 
+    cursor: pointer; 
 }</string>
           </property>
           <property name="text">
@@ -1653,7 +1588,7 @@ QTableWidget{
         <rect>
          <x>20</x>
          <y>100</y>
-         <width>401</width>
+         <width>271</width>
          <height>42</height>
         </rect>
        </property>
@@ -1678,33 +1613,15 @@ QTableWidget{
 	border-radius: 8px;
 	font-weight: bold;
 	font-size: 15px
+}
+
+QPushButton:hover {
+    background-color: rgb(50, 50, 50);
+    cursor: pointer; 
 }</string>
           </property>
           <property name="text">
            <string>Add Delivery</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="btn_exportExcel">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>40</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton{
-	background-color: #34D481;
-	color: white;
-	border: none;
-	border-radius: 8px;
-	font-weight: bold;
-	font-size: 15px
-}</string>
-          </property>
-          <property name="text">
-           <string>Export to Excel</string>
           </property>
          </widget>
         </item>
@@ -1724,7 +1641,12 @@ QTableWidget{
 	border: none;
 	border-radius: 8px;
 	font-weight: bold;
-	font-size: 15px
+	font-size: 15px;
+}
+
+QPushButton:hover {
+    background-color: rgb(255, 56, 56); 
+    cursor: pointer; 
 }</string>
           </property>
           <property name="text">

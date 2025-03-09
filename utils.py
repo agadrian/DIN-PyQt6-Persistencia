@@ -77,7 +77,7 @@ class Edit_delete_widget_function(QWidget):
         # Boton edit
         self.edit_button = QPushButton("", self)
         self.edit_button.setFixedSize(60,30)
-        icon = QIcon("ui/img/lupa.png")
+        icon = QIcon("ui/res/editar.png")
         self.edit_button.setIcon(icon)
         self.edit_button.clicked.connect(self.edit_clicked) # Abrir el dialog
 
@@ -85,7 +85,7 @@ class Edit_delete_widget_function(QWidget):
         # Boton delete
         self.delete_button = QPushButton("", self)
         self.delete_button.setFixedSize(60,30)
-        icon2 = QIcon("ui/img/borrar.png")
+        icon2 = QIcon("ui/res/borrar.png")
         self.delete_button.setIcon(icon2)
         self.delete_button.clicked.connect(self.delete_clicked)
 
