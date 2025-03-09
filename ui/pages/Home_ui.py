@@ -33,17 +33,17 @@ class Ui_MainWindow(object):
         self.icons.setStyleSheet(u"QWidget{\n"
 "	background-color: rgb(0, 0, 0);\n"
 "}")
-        self.widget = QWidget(self.icons)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(30, 110, 175, 801))
-        self.verticalLayout_2 = QVBoxLayout(self.widget)
+        self.layoutWidget = QWidget(self.icons)
+        self.layoutWidget.setObjectName(u"layoutWidget")
+        self.layoutWidget.setGeometry(QRect(30, 110, 175, 1426))
+        self.verticalLayout_2 = QVBoxLayout(self.layoutWidget)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 10, 0)
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.btn_home = QPushButton(self.widget)
+        self.btn_home = QPushButton(self.layoutWidget)
         self.btn_home.setObjectName(u"btn_home")
         self.btn_home.setAutoFillBackground(False)
         icon = QIcon()
@@ -53,7 +53,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.btn_home)
 
-        self.btn_users = QPushButton(self.widget)
+        self.btn_users = QPushButton(self.layoutWidget)
         self.btn_users.setObjectName(u"btn_users")
         self.btn_users.setAutoFillBackground(False)
         icon1 = QIcon()
@@ -63,7 +63,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.btn_users)
 
-        self.btn_querys = QPushButton(self.widget)
+        self.btn_querys = QPushButton(self.layoutWidget)
         self.btn_querys.setObjectName(u"btn_querys")
         self.btn_querys.setAutoFillBackground(False)
         icon2 = QIcon()
@@ -73,7 +73,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.btn_querys)
 
-        self.btn_restaurants = QPushButton(self.widget)
+        self.btn_restaurants = QPushButton(self.layoutWidget)
         self.btn_restaurants.setObjectName(u"btn_restaurants")
         self.btn_restaurants.setAutoFillBackground(False)
         icon3 = QIcon()
@@ -83,7 +83,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.btn_restaurants)
 
-        self.btn_dishes = QPushButton(self.widget)
+        self.btn_dishes = QPushButton(self.layoutWidget)
         self.btn_dishes.setObjectName(u"btn_dishes")
         self.btn_dishes.setAutoFillBackground(False)
         icon4 = QIcon()
@@ -93,7 +93,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.btn_dishes)
 
-        self.btn_delivery = QPushButton(self.widget)
+        self.btn_delivery = QPushButton(self.layoutWidget)
         self.btn_delivery.setObjectName(u"btn_delivery")
         self.btn_delivery.setAutoFillBackground(False)
         icon5 = QIcon()
@@ -103,7 +103,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.btn_delivery)
 
-        self.btn_orders = QPushButton(self.widget)
+        self.btn_orders = QPushButton(self.layoutWidget)
         self.btn_orders.setObjectName(u"btn_orders")
         self.btn_orders.setAutoFillBackground(False)
         icon6 = QIcon()
@@ -113,7 +113,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.btn_orders)
 
-        self.btn_orderDetails = QPushButton(self.widget)
+        self.btn_orderDetails = QPushButton(self.layoutWidget)
         self.btn_orderDetails.setObjectName(u"btn_orderDetails")
         self.btn_orderDetails.setAutoFillBackground(False)
         icon7 = QIcon()
@@ -126,7 +126,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addLayout(self.verticalLayout)
 
-        self.btn_exit = QPushButton(self.widget)
+        self.btn_exit = QPushButton(self.layoutWidget)
         self.btn_exit.setObjectName(u"btn_exit")
         self.btn_exit.setAutoFillBackground(False)
         icon8 = QIcon()
@@ -147,6 +147,12 @@ class Ui_MainWindow(object):
         self.stackedWidget = QStackedWidget(self.main_screen)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setGeometry(QRect(30, 20, 841, 701))
+        self.page_home = QWidget()
+        self.page_home.setObjectName(u"page_home")
+        self.label_2 = QLabel(self.page_home)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(110, 150, 251, 121))
+        self.stackedWidget.addWidget(self.page_home)
         self.page_consultas = QWidget()
         self.page_consultas.setObjectName(u"page_consultas")
         self.users_tittle_2 = QLabel(self.page_consultas)
@@ -226,14 +232,14 @@ class Ui_MainWindow(object):
         self.users_tittle.setObjectName(u"users_tittle")
         self.users_tittle.setGeometry(QRect(20, 0, 121, 51))
         self.users_tittle.setFont(font)
-        self.layoutWidget = QWidget(self.page_usuarios)
-        self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(20, 100, 271, 42))
-        self.horizontalLayout_2 = QHBoxLayout(self.layoutWidget)
+        self.layoutWidget1 = QWidget(self.page_usuarios)
+        self.layoutWidget1.setObjectName(u"layoutWidget1")
+        self.layoutWidget1.setGeometry(QRect(20, 100, 271, 42))
+        self.horizontalLayout_2 = QHBoxLayout(self.layoutWidget1)
         self.horizontalLayout_2.setSpacing(10)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.btn_addUser_2 = QPushButton(self.layoutWidget)
+        self.btn_addUser_2 = QPushButton(self.layoutWidget1)
         self.btn_addUser_2.setObjectName(u"btn_addUser_2")
         self.btn_addUser_2.setMinimumSize(QSize(0, 40))
         self.btn_addUser_2.setStyleSheet(u"QPushButton{\n"
@@ -253,7 +259,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_2.addWidget(self.btn_addUser_2)
 
-        self.btn_exportToPDF = QPushButton(self.layoutWidget)
+        self.btn_exportToPDF = QPushButton(self.layoutWidget1)
         self.btn_exportToPDF.setObjectName(u"btn_exportToPDF")
         self.btn_exportToPDF.setMinimumSize(QSize(0, 40))
         self.btn_exportToPDF.setStyleSheet(u"QPushButton{\n"
@@ -837,6 +843,7 @@ class Ui_MainWindow(object):
         self.btn_orderDetails.setText("")
         self.btn_exit.setText("")
         self.label.setText("")
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Page home", None))
         self.users_tittle_2.setText(QCoreApplication.translate("MainWindow", u"Querys", None))
         self.users_management_2.setText(QCoreApplication.translate("MainWindow", u"Query Area", None))
         ___qtablewidgetitem = self.tabla_users.horizontalHeaderItem(0)
