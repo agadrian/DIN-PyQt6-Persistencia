@@ -139,6 +139,11 @@ class Ui_AddPlateDialog(object):
 "	border-radius: 8px;\n"
 "	font-weight: bold;\n"
 "	font-size: 15px\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #28a766; \n"
+"    cursor: pointer;\n"
 "}")
 
         self.horizontalLayout.addWidget(self.btn_addPlate)
@@ -153,6 +158,11 @@ class Ui_AddPlateDialog(object):
 "	border-radius: 8px;\n"
 "	font-weight: bold;\n"
 "	font-size: 15px\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #7a7a7a;\n"
+"    cursor: pointer; \n"
 "}")
 
         self.horizontalLayout.addWidget(self.btn_cancel)

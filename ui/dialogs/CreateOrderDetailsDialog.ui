@@ -180,6 +180,11 @@ height: 35px;
 	border-radius: 8px;
 	font-weight: bold;
 	font-size: 15px
+}
+
+QPushButton:hover {
+    background-color: #28a766; 
+    cursor: pointer;
 }</string>
       </property>
       <property name="text">
@@ -203,6 +208,11 @@ height: 35px;
 	border-radius: 8px;
 	font-weight: bold;
 	font-size: 15px
+}
+
+QPushButton:hover {
+    background-color: #7a7a7a;
+    cursor: pointer; 
 }</string>
       </property>
       <property name="text">
@@ -222,7 +232,7 @@ height: 35px;
     </rect>
    </property>
    <property name="orientation">
-    <enum>Qt::Horizontal</enum>
+    <enum>Qt::Orientation::Horizontal</enum>
    </property>
   </widget>
  </widget>
