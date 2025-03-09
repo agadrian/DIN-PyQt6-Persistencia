@@ -32,14 +32,23 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>100</y>
-       <width>166</width>
-       <height>821</height>
+       <y>110</y>
+       <width>175</width>
+       <height>801</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
         <item>
          <widget class="QPushButton" name="btn_home">
           <property name="autoFillBackground">
@@ -263,20 +272,46 @@
       </rect>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="page_consultas">
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="users_tittle_2">
        <property name="geometry">
         <rect>
-         <x>360</x>
-         <y>220</y>
-         <width>91</width>
-         <height>61</height>
+         <x>20</x>
+         <y>0</y>
+         <width>141</width>
+         <height>51</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>30</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
-        <string>Consultas</string>
+        <string>Querys</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="users_management_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>60</y>
+         <width>221</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Query Area</string>
        </property>
       </widget>
      </widget>
