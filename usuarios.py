@@ -3,8 +3,9 @@ from db_functions import *
 from utils import *
 from PDFGenerator import PDFGenerator
 
-class usuariosPage:
+class usuariosPage(QWidget):
     def __init__(self, home_window):
+        super().__init__()
         self.home = home_window
 
         # Conectar botones

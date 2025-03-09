@@ -19,12 +19,13 @@ from PyQt6.QtWidgets import (QApplication, QHBoxLayout, QHeaderView, QLabel,
     QLineEdit, QMainWindow, QPushButton, QSizePolicy,
     QStackedWidget, QTableWidget, QTableWidgetItem, QVBoxLayout,
     QWidget)
+import os
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1329, 879)
+        MainWindow.resize(1254, 859)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.icons = QWidget(self.centralwidget)
@@ -35,7 +36,7 @@ class Ui_MainWindow(object):
 "}")
         self.layoutWidget = QWidget(self.icons)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(30, 110, 175, 1426))
+        self.layoutWidget.setGeometry(QRect(30, 110, 177, 1432))
         self.verticalLayout_2 = QVBoxLayout(self.layoutWidget)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
@@ -57,7 +58,7 @@ class Ui_MainWindow(object):
         self.btn_users.setObjectName(u"btn_users")
         self.btn_users.setAutoFillBackground(False)
         icon1 = QIcon()
-        icon1.addFile(u"../res/users4.jpg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon1.addFile(os.path.join(os.path.dirname(__file__), "res", "users4.jpg"), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.btn_users.setIcon(icon1)
         self.btn_users.setIconSize(QSize(150, 150))
 
