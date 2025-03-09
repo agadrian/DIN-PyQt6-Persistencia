@@ -34,10 +34,6 @@ class HomeWindow(QMainWindow):
         self.pedidos_page = pedidosPage(self)
         self.detalles_pedido_page = detallesPedidoPage(self)
         self.repartidores_page = repartidoresPage(self)
-       
-
-        self.home_page = Ui_MainWindow()
-        self.home_page.setupUi(self)
         
 
         # Conectar botones de navegación dentro del stackedWidget

@@ -8,14 +8,14 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PyQt6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
-from PyQt6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PyQt6.QtWidgets import (QApplication, QHBoxLayout, QHeaderView, QLabel,
+from PySide6.QtWidgets import (QApplication, QHBoxLayout, QHeaderView, QLabel,
     QLineEdit, QMainWindow, QPushButton, QSizePolicy,
     QStackedWidget, QTableWidget, QTableWidgetItem, QVBoxLayout,
     QWidget)
@@ -35,7 +35,7 @@ class Ui_MainWindow(object):
 "}")
         self.layoutWidget = QWidget(self.icons)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(30, 110, 175, 1426))
+        self.layoutWidget.setGeometry(QRect(30, 90, 175, 863))
         self.verticalLayout_2 = QVBoxLayout(self.layoutWidget)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
@@ -49,7 +49,7 @@ class Ui_MainWindow(object):
         icon = QIcon()
         icon.addFile(u"../res/home3.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.btn_home.setIcon(icon)
-        self.btn_home.setIconSize(QSize(150, 150))
+        self.btn_home.setIconSize(QSize(80, 77))
 
         self.verticalLayout.addWidget(self.btn_home)
 
@@ -59,7 +59,7 @@ class Ui_MainWindow(object):
         icon1 = QIcon()
         icon1.addFile(u"../res/users4.jpg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.btn_users.setIcon(icon1)
-        self.btn_users.setIconSize(QSize(150, 150))
+        self.btn_users.setIconSize(QSize(80, 80))
 
         self.verticalLayout.addWidget(self.btn_users)
 
@@ -69,7 +69,7 @@ class Ui_MainWindow(object):
         icon2 = QIcon()
         icon2.addFile(u"../res/querys3.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.btn_querys.setIcon(icon2)
-        self.btn_querys.setIconSize(QSize(150, 150))
+        self.btn_querys.setIconSize(QSize(80, 80))
 
         self.verticalLayout.addWidget(self.btn_querys)
 
@@ -79,7 +79,7 @@ class Ui_MainWindow(object):
         icon3 = QIcon()
         icon3.addFile(u"../res/restaurants4.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.btn_restaurants.setIcon(icon3)
-        self.btn_restaurants.setIconSize(QSize(150, 150))
+        self.btn_restaurants.setIconSize(QSize(80, 80))
 
         self.verticalLayout.addWidget(self.btn_restaurants)
 
@@ -89,7 +89,7 @@ class Ui_MainWindow(object):
         icon4 = QIcon()
         icon4.addFile(u"../res/dish3.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.btn_dishes.setIcon(icon4)
-        self.btn_dishes.setIconSize(QSize(150, 150))
+        self.btn_dishes.setIconSize(QSize(80, 80))
 
         self.verticalLayout.addWidget(self.btn_dishes)
 
@@ -99,7 +99,7 @@ class Ui_MainWindow(object):
         icon5 = QIcon()
         icon5.addFile(u"../res/delivery3.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.btn_delivery.setIcon(icon5)
-        self.btn_delivery.setIconSize(QSize(150, 150))
+        self.btn_delivery.setIconSize(QSize(80, 80))
 
         self.verticalLayout.addWidget(self.btn_delivery)
 
@@ -109,7 +109,7 @@ class Ui_MainWindow(object):
         icon6 = QIcon()
         icon6.addFile(u"../res/orders3.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.btn_orders.setIcon(icon6)
-        self.btn_orders.setIconSize(QSize(150, 150))
+        self.btn_orders.setIconSize(QSize(80, 80))
 
         self.verticalLayout.addWidget(self.btn_orders)
 
@@ -119,7 +119,7 @@ class Ui_MainWindow(object):
         icon7 = QIcon()
         icon7.addFile(u"../res/orderDetails3.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.btn_orderDetails.setIcon(icon7)
-        self.btn_orderDetails.setIconSize(QSize(150, 150))
+        self.btn_orderDetails.setIconSize(QSize(80, 80))
 
         self.verticalLayout.addWidget(self.btn_orderDetails)
 
@@ -132,7 +132,7 @@ class Ui_MainWindow(object):
         icon8 = QIcon()
         icon8.addFile(u"../res/exit.jpg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.btn_exit.setIcon(icon8)
-        self.btn_exit.setIconSize(QSize(150, 150))
+        self.btn_exit.setIconSize(QSize(80, 80))
 
         self.verticalLayout_2.addWidget(self.btn_exit)
 
@@ -147,12 +147,6 @@ class Ui_MainWindow(object):
         self.stackedWidget = QStackedWidget(self.main_screen)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setGeometry(QRect(30, 20, 841, 701))
-        self.page_home = QWidget()
-        self.page_home.setObjectName(u"page_home")
-        self.label_2 = QLabel(self.page_home)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(110, 150, 251, 121))
-        self.stackedWidget.addWidget(self.page_home)
         self.page_consultas = QWidget()
         self.page_consultas.setObjectName(u"page_consultas")
         self.users_tittle_2 = QLabel(self.page_consultas)
@@ -843,7 +837,6 @@ class Ui_MainWindow(object):
         self.btn_orderDetails.setText("")
         self.btn_exit.setText("")
         self.label.setText("")
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Page home", None))
         self.users_tittle_2.setText(QCoreApplication.translate("MainWindow", u"Querys", None))
         self.users_management_2.setText(QCoreApplication.translate("MainWindow", u"Query Area", None))
         ___qtablewidgetitem = self.tabla_users.horizontalHeaderItem(0)
