@@ -4,11 +4,6 @@ from home import HomeWindow
 import sys
 
 
-# TODO: Quitar marcos de los dialog
-# TODO: Flecha para volver al login desde el register
-
-
-
 class MainApp(QMainWindow):
     def __init__(self):
         super().__init__()

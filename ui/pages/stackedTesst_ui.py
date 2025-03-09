@@ -710,7 +710,7 @@ class Ui_main_screen_widget(object):
 
         self.retranslateUi(main_screen_widget)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(main_screen_widget)
