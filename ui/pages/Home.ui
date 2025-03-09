@@ -19,7 +19,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>271</width>
+      <width>221</width>
       <height>841</height>
      </rect>
     </property>
@@ -28,209 +28,177 @@
 	background-color: rgb(0, 0, 0);
 }</string>
     </property>
-    <widget class="QPushButton" name="btn_home">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>110</y>
-       <width>75</width>
-       <height>41</height>
+       <y>20</y>
+       <width>164</width>
+       <height>541</height>
       </rect>
      </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../res/lupa2.png</normaloff>../res/lupa2.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>24</width>
-       <height>24</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>29</y>
-       <width>51</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../res/home2.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btn_home_2">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>180</y>
-       <width>75</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../res/restaurante2.png</normaloff>../res/restaurante2.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>24</width>
-       <height>24</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btn_home_3">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>260</y>
-       <width>75</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../res/plato2.png</normaloff>../res/plato2.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>24</width>
-       <height>24</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btn_home_4">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>350</y>
-       <width>75</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../res/pedido2.png</normaloff>../res/pedido2.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>24</width>
-       <height>24</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btn_home_5">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>430</y>
-       <width>75</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../res/repartidor2.png</normaloff>../res/repartidor2.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>24</width>
-       <height>24</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btn_home_6">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>500</y>
-       <width>75</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../res/detalles2.png</normaloff>../res/detalles2.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>24</width>
-       <height>24</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btn_home_7">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>570</y>
-       <width>75</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../res/usuario2.png</normaloff>../res/usuario2.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>24</width>
-       <height>24</height>
-      </size>
-     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="btn_home">
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../res/home3.png</normaloff>../res/home3.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_users">
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../res/users4.jpg</normaloff>../res/users4.jpg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_querys">
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../res/querys3.png</normaloff>../res/querys3.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_restaurants">
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../res/restaurants4.png</normaloff>../res/restaurants4.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_dishes">
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../res/dish3.png</normaloff>../res/dish3.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_delivery">
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../res/delivery3.png</normaloff>../res/delivery3.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_orders">
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../res/orders3.png</normaloff>../res/orders3.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_orderDetails">
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../res/orderDetails3.png</normaloff>../res/orderDetails3.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </widget>
    <widget class="QWidget" name="main_screen" native="true">
@@ -255,7 +223,7 @@
       </rect>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="page_consultas">
       <widget class="QLabel" name="label_2">
@@ -407,6 +375,7 @@ QTableWidget{
        </property>
        <property name="font">
         <font>
+         <family>Segoe UI</family>
          <pointsize>13</pointsize>
         </font>
        </property>
@@ -425,6 +394,7 @@ QTableWidget{
        </property>
        <property name="font">
         <font>
+         <family>Segoe UI</family>
          <pointsize>30</pointsize>
          <bold>true</bold>
         </font>
