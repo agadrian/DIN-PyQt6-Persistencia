@@ -7,12 +7,6 @@ from db_functions import *
 
 
 
-# TODO: Cuando se cree un usuario manualmente desde el panel, meterlo primero en firebase con las comprobaciones, y luego en la base de datos de sqlite con la id de firbase (como si fuera registro normal)
-# TODO: 
-# TODO: 
-# TODO: 
-
-
 class LoginWindow(QWidget):
 
     def __init__(self, main_app):
