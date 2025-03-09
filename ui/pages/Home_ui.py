@@ -24,21 +24,23 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1329, 867)
+        MainWindow.resize(1329, 879)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.icons = QWidget(self.centralwidget)
         self.icons.setObjectName(u"icons")
-        self.icons.setGeometry(QRect(10, 10, 221, 841))
+        self.icons.setGeometry(QRect(0, 0, 231, 881))
         self.icons.setStyleSheet(u"QWidget{\n"
 "	background-color: rgb(0, 0, 0);\n"
 "}")
         self.widget = QWidget(self.icons)
         self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(30, 20, 164, 541))
-        self.verticalLayout = QVBoxLayout(self.widget)
+        self.widget.setGeometry(QRect(30, 100, 166, 821))
+        self.verticalLayout_2 = QVBoxLayout(self.widget)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.btn_home = QPushButton(self.widget)
         self.btn_home.setObjectName(u"btn_home")
         self.btn_home.setAutoFillBackground(False)
@@ -119,6 +121,23 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.btn_orderDetails)
 
+
+        self.verticalLayout_2.addLayout(self.verticalLayout)
+
+        self.btn_exit = QPushButton(self.widget)
+        self.btn_exit.setObjectName(u"btn_exit")
+        self.btn_exit.setAutoFillBackground(False)
+        icon8 = QIcon()
+        icon8.addFile(u"../res/exit.jpg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.btn_exit.setIcon(icon8)
+        self.btn_exit.setIconSize(QSize(150, 150))
+
+        self.verticalLayout_2.addWidget(self.btn_exit)
+
+        self.label = QLabel(self.icons)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(60, 10, 101, 71))
+        self.label.setPixmap(QPixmap(u"../res/logo3.png"))
         self.main_screen = QWidget(self.centralwidget)
         self.main_screen.setObjectName(u"main_screen")
         self.main_screen.setGeometry(QRect(360, 110, 881, 741))
@@ -793,7 +812,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -809,6 +828,8 @@ class Ui_MainWindow(object):
         self.btn_delivery.setText("")
         self.btn_orders.setText("")
         self.btn_orderDetails.setText("")
+        self.btn_exit.setText("")
+        self.label.setText("")
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Consultas", None))
         ___qtablewidgetitem = self.tabla_users.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Id", None));
