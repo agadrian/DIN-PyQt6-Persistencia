@@ -5,6 +5,7 @@ from db_functions import *
 from utils import *
 from dialogs.CreateDeliveryDialog import DeliveryDialog
 from dialogs.UpdateDeliveryDialog import UpdateDeliveryDialog
+from PDFGenerator import PDFGenerator
 
 class repartidoresPage:
     def __init__(self, home_window):
@@ -14,6 +15,8 @@ class repartidoresPage:
         self.btn_addDelivery = self.home.btn_addDelivery
         self.btn_addDelivery.clicked.connect(self.open_dialog)
         
+        self.btn_exportPDF = self.home.btn_exportPDF
+        self.btn_exportPDF.clicked.connect(self.export_pdf)
 
         self.tabla_delivery = self.home.tabla_delivery
 
@@ -34,6 +37,11 @@ class repartidoresPage:
         self.tabla_delivery.setColumnWidth(5, 50)
        
 
+    def export_pdf(self):
+        pdf = PDFGenerator()
+        pdf.generate_table_from_qtwidget(self.tabla_delivery, title="Informe de datos de la tabla")
+        pdf.save("Informe_Repartidores.pdf")
+    
 
     # Abre el dialogo para crear nuevo repartidor
     def open_dialog(self):

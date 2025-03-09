@@ -5,6 +5,7 @@ from db_functions import *
 from utils import *
 from dialogs.CreateOrderDetailsDialog import OrderDetailsDialog
 from dialogs.UpdateOrderDetailsDialog import UpdateOrderDetailsDialog
+from PDFGenerator import PDFGenerator
 
 class detallesPedidoPage:
     def __init__(self, home_window):
@@ -14,6 +15,9 @@ class detallesPedidoPage:
         self.btn_addOrderDetails = self.home.btn_addOrderDetails
         self.btn_addOrderDetails.clicked.connect(self.open_dialog)
         
+
+        self.btn_exportToPDF_4 = self.home.btn_exportToPDF_4
+        self.btn_exportToPDF_4.clicked.connect(self.export_pdf)
 
         self.tabla_ordersDetails = self.home.tabla_ordersDetails
 
@@ -33,6 +37,12 @@ class detallesPedidoPage:
         self.tabla_ordersDetails.setColumnWidth(4, 100)
         self.tabla_ordersDetails.setColumnWidth(5, 50)
         
+
+
+    def export_pdf(self):
+        pdf = PDFGenerator()
+        pdf.generate_table_from_qtwidget(self.tabla_ordersDetails, title="Informe de datos de la tabla")
+        pdf.save("Informe_DetallesPedidos.pdf")
 
 
     # Abre el dialogo para crear nuevo detalles

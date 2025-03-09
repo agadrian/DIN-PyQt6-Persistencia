@@ -5,6 +5,7 @@ from db_functions import *
 from utils import *
 from dialogs.CreateRestaurantDialog import RestaurantDialog
 from dialogs.UpdateRestaurantDialog import UpdateRestaurantDialog
+from PDFGenerator import PDFGenerator
 
 class restaurantesPage:
     def __init__(self, home_window):
@@ -15,6 +16,9 @@ class restaurantesPage:
         # Conectar botones
         self.btn_addRestaurant = self.home.btn_addRestaurant
         self.btn_addRestaurant.clicked.connect(self.open_dialog)
+
+        self.btn_exportToPDF_5 = self.home.btn_exportToPDF_5
+        self.btn_exportToPDF_5.clicked.connect(self.export_pdf)
         
 
         self.tabla_restaurants = self.home.tabla_restaurants
@@ -36,6 +40,12 @@ class restaurantesPage:
         self.tabla_restaurants.setColumnWidth(5, 80)
         self.tabla_restaurants.setColumnWidth(6, 80)
         self.tabla_restaurants.setColumnWidth(7, 35)
+
+
+    def export_pdf(self):
+        pdf = PDFGenerator()
+        pdf.generate_table_from_qtwidget(self.tabla_restaurants, title="Informe de datos de la tabla")
+        pdf.save("Informe_Restaurantes.pdf")
 
 
     # Abre el dialogo para crear nuevo restaurante

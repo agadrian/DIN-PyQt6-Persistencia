@@ -5,6 +5,7 @@ from db_functions import *
 from utils import *
 from dialogs.UpdaterOrderDialog import UpdateOrderDialog
 from dialogs.CreateOrderDialog import OrderDialog
+from PDFGenerator import PDFGenerator
 
 class pedidosPage:
     def __init__(self, home_window):
@@ -13,8 +14,13 @@ class pedidosPage:
         # Conectar botones
         self.btn_addOrder = self.home.btn_addOrder
         self.btn_addOrder.clicked.connect(self.open_dialog)
+
+        self.btn_exportToPDF_3 = self.home.btn_exportToPDF_3
+        self.btn_exportToPDF_3.clicked.connect(self.export_pdf)
         
         self.tabla_orders = self.home.tabla_orders
+
+    
 
         
         # Cargar los pedidos
@@ -29,8 +35,13 @@ class pedidosPage:
         self.tabla_orders.setColumnWidth(1, 120)
         self.tabla_orders.setColumnWidth(2, 130)
         self.tabla_orders.setColumnWidth(3, 130)
-        self.tabla_orders.setColumnWidth(4, 50)
+        self.tabla_orders.setColumnWidth(4, 35)
    
+    
+    def export_pdf(self):
+        pdf = PDFGenerator()
+        pdf.generate_table_from_qtwidget(self.tabla_orders, title="Informe de datos de la tabla")
+        pdf.save("Informe_Pedidos.pdf")
 
 
     # Abre el dialogo para crear nuevo pedido

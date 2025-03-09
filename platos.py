@@ -5,6 +5,7 @@ from db_functions import *
 from utils import *
 from dialogs.CreatePlateDialog import PlateDialog
 from dialogs.UpdatePlateDialog import UpdatePlateDialog
+from PDFGenerator import PDFGenerator
 
 class platosPage:
     def __init__(self, home_window):
@@ -13,6 +14,9 @@ class platosPage:
         # Conectar botones
         self.btn_addPlate = self.home.btn_addPlate
         self.btn_addPlate.clicked.connect(self.open_dialog)
+
+        self.btn_exportToPDF_2 = self.home.btn_exportToPDF_2
+        self.btn_exportToPDF_2.clicked.connect(self.export_pdf)
         
 
         self.tabla_plates = self.home.tabla_plates
@@ -33,6 +37,11 @@ class platosPage:
         self.tabla_plates.setColumnWidth(4, 100)
         self.tabla_plates.setColumnWidth(5, 50)
        
+
+    def export_pdf(self):
+        pdf = PDFGenerator()
+        pdf.generate_table_from_qtwidget(self.tabla_plates, title="Informe de datos de la tabla")
+        pdf.save("Informe_Platos.pdf")
 
     # Abre el dialogo para crear nuevo plato
     def open_dialog(self):

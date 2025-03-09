@@ -1,6 +1,7 @@
 from dialogs.CreateUserDialog import *
 from db_functions import *
 from utils import *
+from PDFGenerator import PDFGenerator
 
 class usuariosPage:
     def __init__(self, home_window):
@@ -10,6 +11,8 @@ class usuariosPage:
         self.btn_addUser_2 = self.home.btn_addUser_2
         self.btn_addUser_2.clicked.connect(self.open_dialog)
         
+        self.btn_exportToPDF = self.home.btn_exportToPDF
+        self.btn_exportToPDF.clicked.connect(self.export_pdf)
 
         self.tabla_users = self.home.tabla_users
 
@@ -29,6 +32,12 @@ class usuariosPage:
         self.tabla_users.setColumnWidth(4, 100)
         self.tabla_users.setColumnWidth(5, 100)
         self.tabla_users.setColumnWidth(6, 100)
+    
+
+    def export_pdf(self):
+        pdf = PDFGenerator()
+        pdf.generate_table_from_qtwidget(self.tabla_users, title="Informe de datos de la tabla")
+        pdf.save("Informe_Usuarios.pdf")
     
 
     #~Abre el dialogo para crear nuevo user
