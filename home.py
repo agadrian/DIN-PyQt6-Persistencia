@@ -33,14 +33,22 @@ class HomeWindow(QMainWindow):
         self.repartidores_page = repartidoresPage(self)
        
 
-        self.home_page = Ui_MainWindow()
-        self.home_page.setupUi(self)
+        # Añadir las páginas al QStackedWidget
+        self.stackedWidget.addWidget(self.users_page)
+        
+
         
 
         # Conectar botones de navegación dentro del stackedWidget
         self.btn_users.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(2))
-        
         self.btn_restaurants.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(3))
+        self.btn_querys.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
+        self.btn_home.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(1))
+        self.btn_dishes.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(4))
+        self.btn_orders.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(5))
+        self.btn_orderDetails.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(6))
+        self.btn_delivery.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(7))
+
     
         # self.btn_users.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.users_page))
         # .....

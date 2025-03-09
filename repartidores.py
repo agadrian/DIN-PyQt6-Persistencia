@@ -7,8 +7,9 @@ from dialogs.CreateDeliveryDialog import DeliveryDialog
 from dialogs.UpdateDeliveryDialog import UpdateDeliveryDialog
 from PDFGenerator import PDFGenerator
 
-class repartidoresPage:
+class repartidoresPage(QWidget):
     def __init__(self, home_window):
+        super().__init__()
         self.home = home_window
 
         # Conectar botones

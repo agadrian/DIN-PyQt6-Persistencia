@@ -8,14 +8,14 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+from PyQt6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+from PyQt6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QHBoxLayout, QHeaderView, QLabel,
+from PyQt6.QtWidgets import (QApplication, QHBoxLayout, QHeaderView, QLabel,
     QLineEdit, QMainWindow, QPushButton, QSizePolicy,
     QStackedWidget, QTableWidget, QTableWidgetItem, QVBoxLayout,
     QWidget)
@@ -165,6 +165,12 @@ class Ui_MainWindow(object):
         font1.setPointSize(13)
         self.users_management_2.setFont(font1)
         self.stackedWidget.addWidget(self.page_consultas)
+        self.page_home = QWidget()
+        self.page_home.setObjectName(u"page_home")
+        self.label_2 = QLabel(self.page_home)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(170, 140, 131, 61))
+        self.stackedWidget.addWidget(self.page_home)
         self.page_usuarios = QWidget()
         self.page_usuarios.setObjectName(u"page_usuarios")
         self.tabla_users = QTableWidget(self.page_usuarios)
@@ -839,6 +845,7 @@ class Ui_MainWindow(object):
         self.label.setText("")
         self.users_tittle_2.setText(QCoreApplication.translate("MainWindow", u"Querys", None))
         self.users_management_2.setText(QCoreApplication.translate("MainWindow", u"Query Area", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"page home", None))
         ___qtablewidgetitem = self.tabla_users.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Id", None));
         ___qtablewidgetitem1 = self.tabla_users.horizontalHeaderItem(1)

@@ -7,8 +7,9 @@ from dialogs.UpdaterOrderDialog import UpdateOrderDialog
 from dialogs.CreateOrderDialog import OrderDialog
 from PDFGenerator import PDFGenerator
 
-class pedidosPage:
+class pedidosPage(QWidget):
     def __init__(self, home_window):
+        super().__init__()
         self.home = home_window
 
         # Conectar botones

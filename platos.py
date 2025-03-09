@@ -7,8 +7,9 @@ from dialogs.CreatePlateDialog import PlateDialog
 from dialogs.UpdatePlateDialog import UpdatePlateDialog
 from PDFGenerator import PDFGenerator
 
-class platosPage:
+class platosPage(QWidget):
     def __init__(self, home_window):
+        super().__init__()
         self.home = home_window
 
         # Conectar botones

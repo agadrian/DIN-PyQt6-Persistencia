@@ -14,7 +14,7 @@ class PDFGenerator(FPDF):
         
     def header(self):
         # Logo
-        self.image('ui/img/logoLogin.png', 10, 8, 20)  # Ajusta la ruta y tamaño según tu logo
+        self.image('ui/res/logo.png', 10, 8, 20)  # Ajusta la ruta y tamaño según tu logo
         # Cabecera
         self.set_font('Arial', 'B', 14)
         self.cell(0, 10, 'Nombre de la Empresa', 0, 1, 'C')

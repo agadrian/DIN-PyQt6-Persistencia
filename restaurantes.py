@@ -7,9 +7,9 @@ from dialogs.CreateRestaurantDialog import RestaurantDialog
 from dialogs.UpdateRestaurantDialog import UpdateRestaurantDialog
 from PDFGenerator import PDFGenerator
 
-class restaurantesPage:
+class restaurantesPage(QWidget):
     def __init__(self, home_window):
-
+        super().__init__()
 
         self.home = home_window
 
